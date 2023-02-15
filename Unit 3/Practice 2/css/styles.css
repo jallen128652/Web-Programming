@@ -1,0 +1,39 @@
+body {
+  background-color: beige;
+  /* commented out font-family in the body tag below */
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+h1 {
+  text-align: center;
+  color: green;
+}
+h2,
+h3 {
+  color: yellowgreen;
+}
+
+p {
+  border-style: solid;
+  border-bottom-color: blue;
+  border-top-color: cornflowerblue;
+  font-size: 20px;
+  color: blue;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  background-color: turquoise;
+}
+
+div ul li {
+  background-color: teal;
+}
