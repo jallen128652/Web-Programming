@@ -11,9 +11,10 @@ h2,
 h3 {
   color: yellowgreen;
 }
-
+nav li {
+  background-color: thistle;
+}
 p {
-  background-color: aqua;
   border-style: solid;
   border-bottom-color: blue;
   border-top-color: cornflowerblue;
@@ -38,22 +39,6 @@ li {
 div ul li {
   background-color: teal;
 }
-/* coloring and options for the anchor tag and links or pseudo-class selectors */
-a {
-  color: red;
-}
-a:link {
-  color: green;
-}
-a:visited {
-  color: gray;
-}
-a:focus {
-  outline: 1px solid black;
-}
-a:hover {
-  background: gray;
-}
-a:active {
-  color: white;
+header {
+  background-color: yellow;
 }
