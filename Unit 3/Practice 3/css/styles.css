@@ -42,3 +42,28 @@ div ul li {
 header {
   background-color: yellow;
 }
+a {
+  color: green;
+  text-decoration: none;
+}
+/* unvisited link */
+a:link {
+  color: yellow;
+}
+/* visited link */
+a:visited {
+  color: chartreuse;
+}
+/* mouse over link */
+a:hover {
+  color: cornflowerblue;
+  background-color: brown;
+}
+/* click on selected link */
+a:active {
+  color: red;
+}
+/* tabbed to link */
+a:focus {
+  color: orangered;
+}
