@@ -24,13 +24,23 @@ p {
 
 li {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 25px;  
 }
-img {
+
+/* ---------------images-------------- */
+figure {
+  text-align: center;
+}
+/* img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
+/* div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 li {
   background-color: turquoise;
@@ -42,6 +52,8 @@ div ul li {
 header {
   background-color: yellow;
 }
+
+/* ----------links styling---------- */
 a {
   color: green;
   text-decoration: none;
