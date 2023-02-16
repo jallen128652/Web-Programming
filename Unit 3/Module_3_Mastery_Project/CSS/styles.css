@@ -1,13 +1,17 @@
+/* Main starting point */
 body {
-  background-color: rgb(184, 248, 243);
+  background-color: rgb(255, 233, 233);
   /* font-family in the body tag below */
   font-family: "Courier New", Courier, monospace;
-  max-width: 1080px;
+  font-weight: 600;
+  min-width: 1080px;
+  max-width: 1224px;
   font-size: 16px;
   line-height: 1.5;
 }
+/* ----------------fonts-------------- */
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
@@ -20,51 +24,9 @@ h3 {
 h1,
 h2,
 h3 {
-  color: red;
+  color: rgb(104, 4, 4);
   font-family: Arial, Helvetica, sans-serif;
 }
-nav li {
-  background-color: rgb(150, 26, 9);
-}
-blockquote {
-  color: red;
-}
-p {
-  /* border-style: solid;
-  border-color: darkred; */
-  font-size: 20px;
-  color: red;
-  /* background-color: brown; */
-}
-
-li {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-size: 25px;
-}
-
-/* ---------------images-------------- */
-figure {
-  text-align: left;
-}
-
-figcaption {
-  color: red;
-}
-/* img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-/* div {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-li {
-  /* background-color: brown; */
-}
-
 ul li {
   /* background-color: black; */
   color: red;
@@ -76,39 +38,108 @@ ol li {
 dl {
   color: red;
 }
+blockquote {
+  color: red;
+}
+footer p {
+  color: rgb(255, 233, 233);
+}
+p {
+  /* border-style: solid;
+  border-color: darkred; */
+  font-size: 16px;
+  color: rgb(230, 2, 2);
+  /* background-color: brown; */
+}
+/* header and footer */
 header {
   line-height: 1.1;
-  background-color: rgb(150, 26, 9);
+  background-color: rgb(170, 57, 57);
 }
 footer {
-  background-color: rgb(150, 26, 9);
+  background-color: rgb(170, 57, 57);
+  line-height: 1.2;
+}
+
+/* ---------------images-------------- */
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ----------links styling---------- */
-a {
+/* -----nav links------ */
+nav li a {
+  color: red;
+  font-size: 25px;
+  text-decoration-line: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* unvisited link */
+nav li a:link {
+  color: red;
+}
+/* visited link */
+nav li a:visited {
+  color: black;
+}
+/* mouse over link */
+nav li a:hover {
+  color: red;
+  background-color: black;
+}
+/* click on selected link */
+nav li a:active {
+  color: red;
+}
+/* tabbed to link */
+nav li a:focus {
+  color: darkred;
+  background-color: red;
+}
+/* ------Footer links------ */
+footer a:link {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* visited link */
+footer a:visited {
+  color: black;
+}
+/* mouse over link */
+footer a:hover {
+  color: red;
+  background-color: black;
+}
+
+/* links in paragrapghs */
+p a {
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   /* text-decoration: ; */
 }
 /* unvisited link */
-a:link {
+p a:link {
   color: red;
 }
 /* visited link */
-a:visited {
+p a:visited {
   color: black;
 }
 /* mouse over link */
-a:hover {
+p a:hover {
   color: red;
-  background-color: black;
 }
 /* click on selected link */
-a:active {
+p a:active {
   color: red;
 }
 /* tabbed to link */
-a:focus {
+p a:focus {
   color: darkred;
-  background-color: red;
 }
