@@ -1,0 +1,43 @@
+/* dependent class, it depends on a tag or specific to the tag before the period */
+h2.header_color {
+  color: red;
+}
+
+h1.highlight_h1 {
+  background-color: green;
+}
+
+h3.looks {
+  background-color: red;
+}
+
+p.back {
+  background-color: aqua;
+}
+
+/* independent class, it can be applied to any tag */
+.highlight {
+  background-color: yellow;
+}
+
+.center_content {
+  text-align: center;
+}
+
+.background {
+  background-color: pink;
+}
+
+.titleColor {
+  color: brown;
+}
+
+/* id selectors */
+/* can only be applied once! */
+#align {
+  text-align: center;
+}
+
+/* ------------------instructions----------------- */
+/* need 4 dependent classes and 4 independent class for the assignment */
+/* at least 1 ID */
