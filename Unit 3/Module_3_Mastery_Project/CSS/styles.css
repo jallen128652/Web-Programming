@@ -143,3 +143,132 @@ p a:active {
 p a:focus {
   color: darkred;
 }
+
+/* inline  elements: <a> <span> <strong> stays inline.
+from left to right. elements only wrap when items can't fit */
+
+/* block elements: <p> <h1> <article> <section> same height as content,
+ same width as container. stacks and starts on new line */
+
+/* -------------fonts-------------------- */
+/* DOWNLOAD WAY 
+create font folder and download to folder 
+syntax
+@font-face {
+  font-family: "My Font";
+  src: url(../fonts/random-sans.ttf);
+}
+add font to section
+body {
+  font-family: "My Font", Helvetica, sans-serif;
+}
+*/
+
+/*---------- fonts from google------------ */
+/* LINK WAY 
+1. fonts.google.com choose font
+2. select styles
+3. copy embed font
+4. add link to fonts in html page
+5. add font-family: 'font-name', font-name2, font-name3; to css sections
+*/
+
+/* ---------example psuedo class------------ */
+/* used for targeting specific elements or adds specificity*/
+/* must match parent/child or sibling relationship */
+/* main p:first-of-type {
+  color: brown;
+} */
+
+/* ------------example pseudo element------------ */
+/* used for extreme specificity */
+/* main p:first-of-type::first-letter {
+  color: aqua;
+  font-size: 30px;
+}
+or  
+  main p::first-line {
+  color: aquamarine;
+  font-size: 40px;
+} */
+
+/* inherited selector overrides order of precedence top overrides next lower */
+/*  
+    ID selector
+    class selector
+    type selector
+    * or universal selector
+    section    
+    **just use an online specificity calculator**
+    */
+
+/* css loaded last will take precedence or top to bottom with bottom given priority 
+    !important will overide
+    example:
+     p {
+      font-size: 12px!important;
+    }
+    */
+/* ---------classes and ID----------- */
+/* dependent class, it depends on a tag or specific to the tag before the period */
+/* h2.header_color {
+            color: red;
+        } */
+
+/* independent class, it can be applied to any tag */
+/* .highlight {
+          background-color: yellow;
+        } */
+
+/* id selectors */
+/* can only be applied once! */
+/* #align {
+          text-align: center;
+        } */
+
+/* -------------example color pallet to paste from-------------- */
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+
+/* -----content wrappers or containers--------- */
+/* content wrappers
+
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+} */
+
+/* give each section a class so you can organize colors etc */
+/* label each section with comments */
+
+/* example buttons */
+/* .yourClass .btn {
+     color: blue;
+     background: white;
+     text-decoration: none;
+     padding: 8px;
+     border-radius: 4px;
+  } 
+     .yourClass btn:hover {
+      background: rgba(47, 48, 90, 80%);
+   }
+   *add class="btn" to the specific a tags you want to make into buttons*
+   **the 4th rgba value adds opacity**
+
+*/
+
+/* ----------fixes for mod3--------- */
+/* 1. google fonts
+   2. list decorations
+   3. fix dpi on images
+   4. center images
+   
+   */

@@ -1,0 +1,93 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+
+/* Global styles
+------------------------------------*/
+body {
+  color: #343434;
+  margin: 0;
+  padding: 0;
+  /* setting main font */
+  font-family: "Poppins", sans-serif;
+}
+/* setting fonts for headers */
+h1,
+h2,
+h3 {
+  font-family: "Tilt Prism", cursive;
+}
+img {
+  width: 300px;
+}
+a {
+  color: #ffe66d;
+}
+a:hover {
+  text-decoration: none;
+}
+h2 {
+  margin: 0;
+}
+/* content wrappers */
+
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* Profile
+  ------------------------------------*/
+header {
+  background: #2f3061;
+  color: #f7fff7;
+}
+
+/* Projects
+  ------------------------------------*/
+.projects {
+  background: aquamarine;
+}
+.projects a {
+  color: #2f3061;
+}
+.projects .btn {
+  color: #f7fff7;
+  background: #2f3061;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.projects .btn:hover {
+  background: rgba(47, 48, 97, 80%);
+}
+
+/* Work Experience
+  ------------------------------------*/
+.work-experience {
+  background: #a1c6d7;
+}
+
+/* Education
+  ------------------------------------*/
+
+/* Contact Info
+  ------------------------------------*/
+footer {
+  background: #343434;
+  color: #f7fff7;
+}
+
+/* inline  elements: <a> <span> <strong> stays inline.
+from left to right. elements only wrap when items can't fit */
+
+/* block elements: <p> <h1> <article> <section> same height as content,
+ same width as container. stacks and starts on new line */
