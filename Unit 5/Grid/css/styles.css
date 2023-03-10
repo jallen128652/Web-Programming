@@ -12,9 +12,10 @@
   border: 2px solid mediumvioletred;
   padding: 10px;
 }
+/* 
 .grid-item:nth-child(4) {
-  /*   grid-column-start: 4; */
-}
+    grid-column-start: 4;
+} */
 .example {
   grid-column: 4 / 6;
 }
