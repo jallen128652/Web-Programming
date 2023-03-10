@@ -1,0 +1,21 @@
+.flex-container {
+  background: lightsteelblue;
+  margin-bottom: 10px;
+  width: 400px;
+  display: flex;
+  /* makes everything wrap within the container even without grow and shrink. 
+  may shift to the next line depending on space */
+  flex-wrap: wrap;
+}
+.flex-item {
+  box-sizing: border-box;
+  border: 1px solid midnightblue;
+  padding: 10px;
+  /* flex: grow shrink basis; anything on the second line will grow full length with a grow of 1
+   and a shrink of 0 */
+  flex: 1 0 100px;
+  /* adjusts spacing around objects **not flexbox specific** */
+  justify-content: space-evenly;
+  /* aligns items along the cross axis in the container **not flexbox specific** */
+  align-items: stretch;
+}
