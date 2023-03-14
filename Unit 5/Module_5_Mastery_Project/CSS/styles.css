@@ -8,11 +8,11 @@
   line-height: 1.5;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
   border: 2px;
   border-style: solid;
   border-color: rgb(104, 4, 4);
-  min-width: 1080px;
-  max-width: 1224px;
   padding: 1%;
 }
 
@@ -23,8 +23,9 @@ h1.heading {
   border: 4px solid rgb(104, 4, 4);
   background-color: rgb(245, 191, 191);
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 5px;
 }
 h2 {
   font-size: 2rem;
@@ -66,10 +67,16 @@ p {
   /* background-color: brown; */
 }
 /* header and footer */
+
 header.head {
   line-height: 1.1;
   background-color: rgb(170, 57, 57);
   border: 4px solid rgb(104, 4, 4);
+  margin-bottom: 20px;
+}
+/* index page header changes */
+.position {
+  position: sticky;
 }
 
 footer.foot {
@@ -77,6 +84,7 @@ footer.foot {
   line-height: 1.2;
   border: 4px solid rgb(104, 4, 4);
   padding: 10px;
+  margin-top: 20px;
 }
 /* ----------text mods---------- */
 /* pseudo class */
@@ -93,6 +101,7 @@ main p:first-of-type {
   margin-right: 100px;
 }
 /* pseudo element */
+
 main p:first-of-type::first-letter {
   font-size: 1.5rem;
   font-weight: bold;
@@ -109,31 +118,73 @@ figcaption {
   color: red;
   font-family: "Roboto Mono", monospace;
 }
+/* -----------------gallery page changes---------- */
 main #pictures {
-  /* width: auto; */
-  padding: 0px;
-  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  gap: 10px;
+}
 
-  border: 0px;
+@media screen and (max-width: 924px) {
+  main #pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    gap: 10px;
+    break-inside: avoid;
+    object-fit: contain;
+  }
+  .col img {
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 624px) {
+  main #pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    gap: 10px;
+    break-inside: avoid;
+    object-fit: contain;
+  }
+  .col img {
+    width: 20%;
+    height: auto;
+  }
 }
 
 .col {
   border: 2px solid rgb(170, 57, 57);
   margin: auto;
-  width: 32%;
   padding: 0px;
   background-color: white;
-  overflow: hidden;
+  break-inside: avoid;
+}
+.p {
+  color: red;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
 }
 
 /* ----------links styling---------- */
 /* -----nav links------ */
-nav li {
-  display: inline-block;
+nav {
+  object-fit: contain;
 }
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav ul li {
+  list-style-type: none;
+}
+
 nav li a {
   color: red;
-  font-size: 25px;
+  font-size: 18px;
   text-decoration-line: none;
   font-family: "Roboto Mono", monospace;
   border: none;
@@ -187,6 +238,7 @@ footer a:hover {
 p a {
   color: black;
   font-family: "Roboto Mono", monospace;
+
   /* text-decoration: ; */
 }
 /* unvisited link */
@@ -212,6 +264,43 @@ p a:focus {
 
 .image {
   text-align: center;
+}
+/* --------------index page changes------------- */
+.early h2 {
+  margin-top: 0px;
+}
+.index-img {
+  float: left;
+  margin: 10px;
+}
+.early {
+  break-inside: avoid;
+}
+.career {
+  break-inside: avoid;
+}
+.hobbies {
+  break-inside: avoid;
+}
+.present {
+  break-inside: avoid;
+}
+
+.container {
+  column-count: 2;
+}
+/* phone */
+@media screen and (max-width: 600px) {
+  .container {
+    column-count: 1;
+  }
+}
+/* -------------------for all pages changes ----------- */
+/* nav changes */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
 }
 
 /* -------------------my notes---------------------- */
