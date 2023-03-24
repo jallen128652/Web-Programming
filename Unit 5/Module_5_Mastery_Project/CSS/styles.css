@@ -126,35 +126,6 @@ main #pictures {
   gap: 10px;
 }
 
-@media screen and (max-width: 924px) {
-  main #pictures {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    gap: 10px;
-    break-inside: avoid;
-    object-fit: contain;
-  }
-  .col img {
-    width: 50%;
-    height: auto;
-  }
-}
-@media screen and (max-width: 624px) {
-  main #pictures {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    gap: 10px;
-    break-inside: avoid;
-    object-fit: contain;
-  }
-  .col img {
-    width: 20%;
-    height: auto;
-  }
-}
-
 .col {
   border: 2px solid rgb(170, 57, 57);
   margin: auto;
@@ -188,7 +159,7 @@ nav li a {
   text-decoration-line: none;
   font-family: "Roboto Mono", monospace;
   border: none;
-  padding: 15px 32px;
+  padding: 10px 25px;
 }
 /* unvisited link */
 nav li a:link {
@@ -300,9 +271,37 @@ p a:focus {
 @media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    line-height: 2.5;
   }
 }
-
+@media screen and (max-width: 924px) {
+  main #pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    gap: 10px;
+    break-inside: avoid;
+    object-fit: contain;
+  }
+  .col img {
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 624px) {
+  main #pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    gap: 10px;
+    break-inside: avoid;
+    object-fit: contain;
+  }
+  .col img {
+    width: 20%;
+    height: auto;
+  }
+}
 /* -------------------my notes---------------------- */
 
 /******************add these classes*****************/
