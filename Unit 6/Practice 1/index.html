@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Form</h1>
+    </header>
+    <main>
+      <form method="get">
+        <div>
+          <ul>
+            <legend>Contact Information</legend>
+            <li>
+              <label for="name">Name:</label>
+              <input name="name" id="name" type="text" />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                required
+                placeholder="me@example.com"
+              />
+            </li>
+            <li>
+              <label for="phone">Phone Number:</label>
+              <input name="phone" id="phone" type="tel" />
+            </li>
+            <li>
+              <label for="url">Website URL:</label>
+              <input name="url" id="url" type="url" />
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <legend>Party Information</legend>
+            <li>
+              <label for="color">Favorite Color:</label>
+              <input name="color" id="color" type="color" />
+            </li>
+            <li>
+              <label for="flavor">What cake flavor do you want?</label>
+              <select name="flavor" id="flavor">
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+              </select>
+            </li>
+            <li>
+              <label for="max-invite"
+                >How many guests would you like to invite?</label
+              >
+              <input
+                type="range"
+                id="max-invite"
+                name="max-invite"
+                value="10"
+                min="0"
+                max="100"
+                oninput="this.nextElementSibling.value = this.value"
+              />
+              <output>10</output>
+            </li>
+          </ul>
+
+          <fieldset>
+            <legend>What type of food do you want to serve?</legend>
+            <input id="pizza" name="pizza" type="radio" value="pizza" checked />
+            <label for="pizza">Pizza</label><br />
+            <input id="tacos" name="tacos" type="radio" value="tacos" />
+            <label for="tacos">Tacos</label><br />
+            <input
+              id="sandwiches"
+              name="sandwiches"
+              type="radio"
+              value="sandwiches"
+            />
+            <label for="sandwiches">Sandwiches</label><br />
+            <input id="fajitas" name="fajitas" type="radio" value="fajitas" />
+            <label for="fajitas">Fajitas</label><br />
+            <input id="nachos" name="nachos" type="radio" value="nachos" />
+            <label for="nachos">Nachos</label><br />
+            <input id="pasta" name="pasta" type="radio" value="pasta" />
+            <label for="pasta">Pasta</label>
+          </fieldset>
+          <fieldset>
+            <legend>Do you want to serve any optional desserts?</legend>
+            <input
+              id="cookies"
+              name="cookies"
+              type="checkbox"
+              value="cookies"
+            />
+            <label for="cookies">Cookies</label><br />
+            <input
+              id="brownies"
+              name="brownies"
+              type="checkbox"
+              value="brownies"
+            />
+            <label for="brownies">Brownies</label><br />
+            <input id="pie" name="pie" type="checkbox" value="pie" />
+            <label for="pie">Pie</label><br />
+            <input
+              id="ice cream"
+              name="ice cream"
+              type="checkbox"
+              value="ice cream"
+            />
+            <label for="ice cream">Ice cream</label><br />
+            <input
+              id="cobbler"
+              name="cobbler"
+              type="checkbox"
+              value="cobbler"
+            />
+            <label for="cobbler">Cobbler</label>
+          </fieldset>
+        </div>
+
+        <label for="textarea">Comments:</label>
+        <textarea name="textarea" id="textarea" cols="25" rows="2"></textarea>
+        <br />
+
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+      </form>
+    </main>
+    <footer>
+      <h2>footer</h2>
+    </footer>
+  </body>
+</html>

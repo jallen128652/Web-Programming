@@ -1,0 +1,41 @@
+body {
+  padding: 0;
+  margin: 5px;
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+header {
+  background: skyblue;
+  text-align: center;
+}
+main {
+  background: lightblue;
+  display: block;
+  padding: 10px 10px;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+form {
+  line-height: 1.5;
+}
+div {
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  background-color: aqua;
+}
+
+footer {
+  text-align: center;
+}
+li {
+  list-style-type: none;
+}
+legend {
+  text-decoration: underline;
+}
