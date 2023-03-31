@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body class="body_content">
+    <head>
+      <!-- character encoding -->
+      <meta charset="UTF-8" />
+      <!-- Page description -->
+      <meta name="description" contents="Jim's Contact Page" />
+      <!-- Viewport settings to scale for device sizes -->
+      <meta name="viewport" contents="width=device-width, initial-scale=1.0" />
+      <!-- Title for the tab bar -->
+      <title>Jim's Contact Page</title>
+      <!-- linking css page for styling -->
+      <link rel="stylesheet" href="css/styles.css" />
+      <!-- adding google font link -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet"
+      />
+      <!-- embedded styling here -->
+    </head>
+    <header class="head position">
+      <h1 class="heading h1">Jim's Contact Page</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="Favorites.html">Favorites</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact-me.html">Contact Me</a></li>
+          <li><a href="mailto:jallen128652@mymail.tstc.edu">Send email</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="contact">
+        <h2>Please fill out the contact form:</h2>
+        <form method="get">
+          <div>
+            <ul>
+              <legend>Contact Information</legend>
+              <li>
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text" />
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="me@example.com"
+                />
+              </li>
+              <li>
+                <label for="phone">Phone Number:</label>
+                <input name="phone" id="phone" type="tel" />
+              </li>
+              <li>
+                <label for="url">Website URL:</label>
+                <input name="url" id="url" type="url" />
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <legend>Web Design Preferences</legend>
+              <li>
+                <label for="color">Color Preference 1:</label>
+                <input name="color" id="color" type="color" />
+              </li>
+              <li>
+                <label for="color">Color Preference 2:</label>
+                <input name="color" id="color" type="color" />
+              </li>
+              <li>
+                <label for="style">What style page do you like?</label>
+                <select name="style" id="style">
+                  <option value="rounded">Rounded</option>
+                  <option value="blocky">Blocky</option>
+                  <option value="composite">Composite</option>
+                </select>
+              </li>
+              <li>
+                <label for="How many subdomains"
+                  >How many sub domains will you need?</label
+                >
+                <input
+                  type="range"
+                  id="max-pages"
+                  name="max-pages"
+                  value="1"
+                  min="0"
+                  max="30"
+                  oninput="this.nextElementSibling.value = this.value"
+                />
+                <output>1</output>
+              </li>
+            </ul>
+
+            <fieldset>
+              <legend>What type of page will it be?</legend>
+              <input id="info" name="info" type="radio" value="info" checked />
+              <label for="info">Information</label><br />
+              <input
+                id="business"
+                name="business"
+                type="radio"
+                value="business"
+              />
+              <label for="business">Business</label><br />
+              <input
+                id="marketplace"
+                name="marketplace"
+                type="radio"
+                value="marketplace"
+              />
+              <label for="marketplace">Ecommerse</label><br />
+              <input
+                id="hosting site"
+                name="hosting site"
+                type="radio"
+                value="hosting site"
+              />
+              <label for="hosting site">Hosting Site</label><br />
+            </fieldset>
+            <fieldset>
+              <legend>Do you need additional coding?</legend>
+              <input
+                id="javascript"
+                name="javascript"
+                type="checkbox"
+                value="javascript"
+              />
+              <label for="javascript">Javascript</label><br />
+              <input id="MySQL" name="MySQL" type="checkbox" value="MySQL" />
+              <label for="MySQL">MySQL</label><br />
+            </fieldset>
+          </div>
+          <!-- embedded table -->
+          <table>
+            <thead>
+              <tr>
+                <th colspan="6">General Pricing</th>
+              </tr>
+              <tr>
+                <th scope="col">Page Type</th>
+                <th scope="col">First Page</th>
+                <th scope="col">Added Pages</th>
+                <th scope="col">JS</th>
+                <th scope="col">MySQL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Information</td>
+                <td>$75</td>
+                <td>$30</td>
+                <td>$60/hr</td>
+                <td>$80/hr</td>
+              </tr>
+              <tr>
+                <td>Business</td>
+                <td>$80</td>
+                <td>$30</td>
+                <td>$60/hr</td>
+                <td>$80/hr</td>
+              </tr>
+              <tr>
+                <td>Ecommerse</td>
+                <td>$120</td>
+                <td>$50</td>
+                <td>$80/hr</td>
+                <td>$80/hr</td>
+              </tr>
+              <tr>
+                <td>Hosting Site</td>
+                <td>$150</td>
+                <td>$50</td>
+                <td>$90/hr</td>
+                <td>$95/hr</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+
+          <label for="textarea">Comments:</label>
+          <textarea name="textarea" id="textarea" cols="35" rows="3"></textarea>
+          <br />
+
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+        </form>
+      </div>
+    </main>
+    <footer class="foot">
+      <!-- Copyright info -->
+      <p>
+        Copyright 2023 -
+        <a href="mailto:jallen128652@mymail.tstc.edu">James Allen </a
+        >&copy;<br />
+        1(800)555-5555
+      </p>
+    </footer>
+  </body>
+</html>

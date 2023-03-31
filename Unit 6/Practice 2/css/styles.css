@@ -1,0 +1,60 @@
+table {
+  border: 3px solid black;
+  border-collapse: collapse;
+  font-family: arial;
+  font-size: 1.3rem;
+}
+caption {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  padding: 3px;
+  background-color: red;
+  font-weight: bold;
+  color: white;
+}
+tbody {
+  border: 1px solid black;
+}
+.day {
+  background-color: lightblue;
+}
+.hours {
+  background-color: lightgray;
+}
+.total {
+  background-color: red;
+  border-left: 3px solid black;
+  color: white;
+  font-weight: bold;
+}
+
+.totalhours {
+  background-color: lightgreen;
+}
+.hourlyrate {
+  background-color: lightsalmon;
+}
+.totalpay {
+  background-color: red;
+  border-top: 3px solid black;
+  font-weight: bold;
+  color: white;
+}
+.totalpay td {
+  border-left: 3px solid black;
+}
+.bold {
+  font-weight: bold;
+}
+
+th {
+  background-color: red;
+  border: 3px solid black;
+  padding: 5px;
+  color: white;
+}
+td {
+  padding: 5px;
+  border: 1px solid black;
+}

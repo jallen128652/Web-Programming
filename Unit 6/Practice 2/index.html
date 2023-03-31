@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <table>
+    <caption>
+      Weekly Time Sheet
+    </caption>
+    <colgroup>
+      <col span="2" class="day" />
+      <col span="4" class="hours" />
+      <col class="total" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th colspan="2">Day</th>
+        <th scope="col">Regular Hours</th>
+        <th scope="col">Overtime Hours</th>
+        <th scope="col">Sick Hours</th>
+        <th scope="col">Vacation Hours</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>11/1/19</td>
+        <td>8.00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>8.00</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>11/2/19</td>
+        <td>4.00</td>
+        <td></td>
+        <td>4.00</td>
+        <td></td>
+        <td>8.00</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>11/3/19</td>
+        <td>4.00</td>
+        <td></td>
+        <td></td>
+        <td>4.00</td>
+        <td>8.00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="totalhours">
+        <td colspan="2" class="bold">Total Hours</td>
+        <td>16.00</td>
+        <td>0.00</td>
+        <td>4.00</td>
+        <td>4.00</td>
+        <td class="total">24.00</td>
+      </tr>
+      <tr class="hourlyrate">
+        <td colspan="2" class="bold">Hourly Rate</td>
+        <td>$20.00</td>
+        <td>$30.00</td>
+        <td>$20.00</td>
+        <td>$20.00</td>
+        <td class="total"></td>
+      </tr>
+      <tr class="totalpay">
+        <td colspan="2" class="bold">Total Pay</td>
+        <td>$320.00</td>
+        <td>$0.00</td>
+        <td>$80.00</td>
+        <td>$80.00</td>
+        <td class="total">$480.00</td>
+      </tr>
+    </tfoot>
+  </table>
+</html>
