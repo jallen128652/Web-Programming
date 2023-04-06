@@ -1,0 +1,95 @@
+html {
+  background-color: black;
+}
+body {
+  font-family: "Teko", sans-serif;
+  background-color: rgb(124, 123, 123);
+  color: rgb(204, 8, 8);
+  font-size: 30px;
+  border: 3px solid rgb(139, 0, 0);
+  border-radius: 15px;
+  margin: 10px;
+}
+h1 {
+  font-size: 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(204, 8, 8);
+  text-align: center;
+}
+header {
+  text-align: center;
+  border: 3px solid rgb(139, 0, 0);
+  border-radius: 15px;
+  background-image: url(../Images/banner.jpg);
+  background-size: cover;
+  margin: 10px;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  display: inline-flex;
+  font-size: 1.8rem;
+  padding: 10px;
+  background-color: black;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+main {
+  border: 3px solid rgb(139, 0, 0);
+  border-radius: 15px;
+  background-color: rgb(8, 8, 8);
+  color: rgb(204, 8, 8);
+  margin: 10px;
+}
+main p {
+  padding: 20px;
+}
+footer {
+  border: 3px solid rgb(139, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(8, 8, 8);
+}
+header img {
+  border-radius: 15px;
+  max-width: 99%;
+}
+/* unvisited link */
+nav li a:link {
+  color: red;
+}
+/* visited link */
+nav li a:visited {
+  color: red;
+}
+/* mouse over link */
+nav li a:hover {
+  color: red;
+  background-color: black;
+}
+/* click on selected link */
+nav li a:active {
+  color: red;
+}
+/* tabbed to link */
+nav li a:focus {
+  color: darkred;
+  background-color: red;
+}
+/* color package */
+/* font rgb(204, 8, 8) */
+/* font2 rgb(153, 0, 0) */
+/* background rgb(8, 8, 8) */
+/* background2 rgb(102, 102, 102) */
+/* borders rgb(139, 0, 0) */
