@@ -1,0 +1,20 @@
+1. Javascript is case sensitive for everything but inside quoted strings.
+2. Javascript uses camelCase.
+-Variables start with lowercase letter: var greenDuck;
+-Objects and classes start with uppercase letter: var date = Date();
+-Constants are all caps: const = CONSTANTLYUPPERCASE;
+3. Whitespace matters to readability.
+-readable:
+  var date = new Date();
+  document.body.innerHTML = "<h1>" + date + "</h1>";
+-not readable:
+  var date=new Date();document.body.innerHTML="<h1>"+date+"</h1>";
+4. End each statement with a semicolon.
+5. Use comments liberally:
+- // single line comments
+- /* multi line comments */
+6. Comments can be used to document code or to disable code.
+- disabling code using comments can assist with debugging
+- can disable multiple lines of code using multi line comments
+- use caution with multi line comments as */ is also part of some lines of valid code
+7. Comments help you remember the functionality of what you wrote and others who contribute.
