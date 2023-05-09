@@ -1,20 +1,78 @@
 1. Javascript is case sensitive for everything but inside quoted strings.
+
 2. Javascript uses camelCase.
 -Variables start with lowercase letter: var greenDuck;
 -Objects and classes start with uppercase letter: var date = Date();
 -Constants are all caps: const = CONSTANTLYUPPERCASE;
+
 3. Whitespace matters to readability.
 -readable:
   var date = new Date();
   document.body.innerHTML = "<h1>" + date + "</h1>";
 -not readable:
   var date=new Date();document.body.innerHTML="<h1>"+date+"</h1>";
+
 4. End each statement with a semicolon.
+
 5. Use comments liberally:
 - // single line comments
 - /* multi line comments */
+
 6. Comments can be used to document code or to disable code.
 - disabling code using comments can assist with debugging
 - can disable multiple lines of code using multi line comments
 - use caution with multi line comments as */ is also part of some lines of valid code
+
 7. Comments help you remember the functionality of what you wrote and others who contribute.
+
+8. quotes within strings use the \"quoted text\"
+- "This is \"my jam\" buddy."
+
+9. some string functions:
+var myString = "This is my string. Leave it alone";
+myString.length 
+-34
+myString.toUpperCase()
+-"THIS IS MY STRING. LEAVE IT ALONE"
+myString
+-"This is my string. Leave it alone"
+
+10. string functions without Variables using string literals
+"This is my string".length
+-17
+
+11. numbers
+-12 int
+-12.0 float
+--12.0 negative numbers
+--Infinity
+var myNumber = 33;
+-undefined
+
+12. Math
+ex Math.round(12.121222323421341)
+-12
+ex Math.random()
+
+13. Booleans
+-true or false (all lower case)
+ex buttonHasBeenClicked = false
+ex2 
+var myLocation = "Santa Barbara", myOtherLocation = "Los Angeles";
+myLocaiton === myOtherLocation
+-false
+
+14. concatenating
+ex 
+var x = 10;
+var myName = "Tony";
+var myLastName = "Spaulding"
+
+console.log(myName + " " + myLastName);
+- Tony Spaulding
+
+console.log(myName + "'s birthday is on the " + x + "th.");
+- Tony's birthday is on the 10th.
+
+console.log(myName.concat(myLastName));
+- TonySpaulding
