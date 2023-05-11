@@ -1,16 +1,17 @@
 /* Main starting point */
 
 .body_content {
-  background-color: rgb(255, 233, 233);
+  box-sizing: border-box;
+  background-color: rgb(238, 238, 238);
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   margin-left: auto;
   margin-right: auto;
-  border: 2px;
+  border: 4px;
   border-style: solid;
-  border-color: rgb(104, 4, 4);
+  border-color: rgb(53, 66, 89);
   min-width: 1080px;
   max-width: 1224px;
   padding: 1%;
@@ -20,14 +21,18 @@
 h1.heading {
   font-size: 3rem;
   font-weight: bold;
-  border: 4px solid rgb(104, 4, 4);
-  background-color: rgb(245, 191, 191);
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(203, 178, 121);
   text-align: center;
   margin-left: 100px;
   margin-right: 100px;
 }
 h2 {
   font-size: 2rem;
+  text-align: center;
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(203, 178, 121);
+  margin: 50px;
 }
 h3 {
   font-size: 1.5rem;
@@ -35,32 +40,27 @@ h3 {
 h1,
 h2,
 h3 {
-  color: rgb(104, 4, 4);
+  color: rgb(53, 66, 89);
   font-family: "Roboto Mono", monospace;
 }
 ul li {
   /* background-color: black; */
-  color: red;
+  color: darkblue;
   list-style-type: circle;
 }
 ol li {
   /* background-color: black; */
-  color: red;
-}
-dl {
-  color: red;
-}
-blockquote {
-  color: red;
+  color: darkblue;
 }
 footer p {
   color: rgb(255, 233, 233);
+  text-align: center;
 }
 p {
   /* border-style: solid;
     border-color: darkred; */
   font-size: 16px;
-  color: rgb(230, 2, 2);
+  color: darkblue;
   letter-spacing: 1px;
   word-spacing: 1px;
   /* background-color: brown; */
@@ -68,71 +68,50 @@ p {
 /* header and footer */
 header.head {
   line-height: 1.1;
-  background-color: rgb(170, 57, 57);
-  border: 4px solid rgb(104, 4, 4);
+  background-color: rgb(83, 113, 136);
+  border: 4px solid rgb(53, 66, 89);
 }
 
 footer.foot {
-  background-color: rgb(170, 57, 57);
+  background-color: rgb(53, 66, 89);
   line-height: 1.2;
-  border: 4px solid rgb(104, 4, 4);
+  border: 4px solid rgb(53, 66, 89);
   padding: 10px;
+  margin-top: 10px;
 }
-/* ----------text mods---------- */
-/* pseudo class */
-main p:first-of-type {
-  text-indent: 15px;
+/* sections */
+.explain {
+  background-color: rgb(225, 212, 187);
+  border: 4px solid rgb(53, 66, 89);
+  margin-top: 10px;
 }
-.name:last-of-type {
-  font-size: 3rem;
-  font-weight: bold;
-  border: 4px solid rgb(104, 4, 4);
-  background-color: rgb(245, 191, 191);
-  text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+.explain p {
+  margin: 10px;
 }
-/* pseudo element */
-main p:first-of-type::first-letter {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(104, 4, 4);
+.jokes {
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(225, 212, 187);
+  margin-top: 10px;
 }
-
-/* ---------------images-------------- */
-
-figure {
-  text-align: center;
+.jokes ol {
+  margin-left: 50px;
+  margin-right: 50px;
 }
-
-figcaption {
-  color: red;
-  font-family: "Roboto Mono", monospace;
+.meme {
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(225, 212, 187);
+  margin-top: 10px;
 }
-main #pictures {
-  /* width: auto; */
-  padding: 0px;
-  margin: 0px;
-
-  border: 0px;
-}
-
-.col {
-  border: 2px solid rgb(170, 57, 57);
-  margin: auto;
-  width: 32%;
-  padding: 0px;
-  background-color: white;
-  overflow: hidden;
-}
-
 /* ----------links styling---------- */
 /* -----nav links------ */
+nav {
+  text-align: center;
+}
 nav li {
   display: inline-block;
 }
 nav li a {
-  color: red;
+  color: darkblue;
   font-size: 25px;
   text-decoration-line: none;
   font-family: "Roboto Mono", monospace;
@@ -141,7 +120,7 @@ nav li a {
 }
 /* unvisited link */
 nav li a:link {
-  color: red;
+  color: darkblue;
 }
 /* visited link */
 nav li a:visited {
@@ -149,28 +128,21 @@ nav li a:visited {
 }
 /* mouse over link */
 nav li a:hover {
-  color: red;
+  color: lightcyan;
   background-color: black;
 }
 /* click on selected link */
 nav li a:active {
-  color: red;
+  color: darkblue;
 }
 /* tabbed to link */
 nav li a:focus {
-  color: darkred;
-  background-color: red;
-}
-.button {
-  color: rgb(255, 233, 233);
-  background: red;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
+  color: darkblue;
+  background-color: lightblue;
 }
 /* ------Footer links------ */
 footer a:link {
-  color: red;
+  color: lightblue;
   font-family: "Roboto Mono", monospace;
 }
 /* visited link */
@@ -179,7 +151,7 @@ footer a:visited {
 }
 /* mouse over link */
 footer a:hover {
-  color: red;
+  color: lightblue;
   background-color: black;
 }
 
@@ -191,7 +163,7 @@ p a {
 }
 /* unvisited link */
 p a:link {
-  color: red;
+  color: darkblue;
 }
 /* visited link */
 p a:visited {
@@ -199,17 +171,85 @@ p a:visited {
 }
 /* mouse over link */
 p a:hover {
-  color: red;
+  color: darkblue;
 }
 /* click on selected link */
 p a:active {
-  color: red;
+  color: darkblue;
 }
 /* tabbed to link */
 p a:focus {
-  color: darkred;
+  color: darkblue;
 }
 
 .image {
   text-align: center;
 }
+
+/* images section */
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  gap: 10px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.col {
+  border: 2px solid rgb(53, 66, 89);
+  margin: 10px;
+  padding: 0px;
+  background-color: white;
+  break-inside: avoid;
+  max-width: 320px;
+}
+@media screen and (max-width: 1130px) {
+  .body_content {
+    max-width: 100%;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  .col {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 745px) {
+  .body_content {
+    max-width: 100%;
+  }
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  .col {
+    max-width: 320px;
+  }
+}
+
+/* color palette */
+/* dark blue rgb(53, 66, 89)
+    blue      rgb(83, 113, 136)
+    tan       rgb(203, 178, 121)
+    cream     rgb(225, 212, 187)
+    gray      rgb(238, 238, 238) */
