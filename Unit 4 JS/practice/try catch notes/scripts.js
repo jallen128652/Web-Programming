@@ -32,6 +32,7 @@ catch (RangeError) {
 }
 
 try {
+    // this should be alert not aldert
     aldert("welcome guest");
 }
 catch (err) {
