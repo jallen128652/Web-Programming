@@ -1,0 +1,255 @@
+/* Main starting point */
+
+.body_content {
+  box-sizing: border-box;
+  background-color: rgb(238, 238, 238);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px;
+  border-style: solid;
+  border-color: rgb(53, 66, 89);
+  min-width: 1080px;
+  max-width: 1224px;
+  padding: 1%;
+}
+
+/* ----------------fonts, base colors, sizes-------------- */
+h1.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(203, 178, 121);
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(203, 178, 121);
+  margin: 50px;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h1,
+h2,
+h3 {
+  color: rgb(53, 66, 89);
+  font-family: "Roboto Mono", monospace;
+}
+ul li {
+  /* background-color: black; */
+  color: darkblue;
+  list-style-type: circle;
+}
+ol li {
+  /* background-color: black; */
+  color: darkblue;
+}
+footer p {
+  color: rgb(255, 233, 233);
+  text-align: center;
+}
+p {
+  /* border-style: solid;
+    border-color: darkred; */
+  font-size: 16px;
+  color: darkblue;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  /* background-color: brown; */
+}
+/* header and footer */
+header.head {
+  line-height: 1.1;
+  background-color: rgb(83, 113, 136);
+  border: 4px solid rgb(53, 66, 89);
+}
+
+footer.foot {
+  background-color: rgb(53, 66, 89);
+  line-height: 1.2;
+  border: 4px solid rgb(53, 66, 89);
+  padding: 10px;
+  margin-top: 10px;
+}
+/* sections */
+.explain {
+  background-color: rgb(225, 212, 187);
+  border: 4px solid rgb(53, 66, 89);
+  margin-top: 10px;
+}
+.explain p {
+  margin: 10px;
+}
+.jokes {
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(225, 212, 187);
+  margin-top: 10px;
+}
+.jokes ol {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.meme {
+  border: 4px solid rgb(53, 66, 89);
+  background-color: rgb(225, 212, 187);
+  margin-top: 10px;
+}
+/* ----------links styling---------- */
+/* -----nav links------ */
+nav {
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+}
+nav li a {
+  color: darkblue;
+  font-size: 25px;
+  text-decoration-line: none;
+  font-family: "Roboto Mono", monospace;
+  border: none;
+  padding: 15px 32px;
+}
+/* unvisited link */
+nav li a:link {
+  color: darkblue;
+}
+/* visited link */
+nav li a:visited {
+  color: black;
+}
+/* mouse over link */
+nav li a:hover {
+  color: lightcyan;
+  background-color: black;
+}
+/* click on selected link */
+nav li a:active {
+  color: darkblue;
+}
+/* tabbed to link */
+nav li a:focus {
+  color: darkblue;
+  background-color: lightblue;
+}
+/* ------Footer links------ */
+footer a:link {
+  color: lightblue;
+  font-family: "Roboto Mono", monospace;
+}
+/* visited link */
+footer a:visited {
+  color: black;
+}
+/* mouse over link */
+footer a:hover {
+  color: lightblue;
+  background-color: black;
+}
+
+/* links in paragrapghs */
+p a {
+  color: black;
+  font-family: "Roboto Mono", monospace;
+  /* text-decoration: ; */
+}
+/* unvisited link */
+p a:link {
+  color: darkblue;
+}
+/* visited link */
+p a:visited {
+  color: black;
+}
+/* mouse over link */
+p a:hover {
+  color: darkblue;
+}
+/* click on selected link */
+p a:active {
+  color: darkblue;
+}
+/* tabbed to link */
+p a:focus {
+  color: darkblue;
+}
+
+.image {
+  text-align: center;
+}
+
+/* images section */
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  gap: 10px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.col {
+  border: 2px solid rgb(53, 66, 89);
+  margin: 10px;
+  padding: 0px;
+  background-color: white;
+  break-inside: avoid;
+  max-width: 320px;
+}
+@media screen and (max-width: 1130px) {
+  .body_content {
+    max-width: 100%;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  .col {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 745px) {
+  .body_content {
+    max-width: 100%;
+  }
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+  .col {
+    max-width: 320px;
+  }
+}
+
+/* color palette */
+/* dark blue rgb(53, 66, 89)
+    blue      rgb(83, 113, 136)
+    tan       rgb(203, 178, 121)
+    cream     rgb(225, 212, 187)
+    gray      rgb(238, 238, 238) */
