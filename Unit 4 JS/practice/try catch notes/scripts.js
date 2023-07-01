@@ -24,35 +24,36 @@
 
 // -----------------try catch------------------
 var num1 = 1;
-try{
+try {
     num1.toPrecision(500);
 }
-catch(RangeError){
+catch (RangeError) {
     console.log(RangeError.message);
 }
 
-try{
+try {
     aldert("welcome guest");
 }
-catch(err){
+catch (err) {
     console.log("try catch on line 10 did not execute");
 }
 
 // --------------throw--------------
 var num2 = 2;
-try{
-    if (num2 > 50){
+try {
+    if (num2 > 50) {
         throw "number is too large! Please enter a smaller number.";
-    }else if(num2 == 2) {
+    } else if (num2 == 2) {
         throw "number was spot on";
-    }else {
+    } else {
         num2 = 34;
     }
-} 
-catch(messageThrown) {
+}
+// caught error
+catch (messageThrown) {
     console.log("The " + messageThrown);
 }
 // always executes
-finally{
+finally {
     console.log("The finally block ran " + num2);
 }
