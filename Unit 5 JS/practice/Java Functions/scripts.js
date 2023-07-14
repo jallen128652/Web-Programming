@@ -93,49 +93,41 @@
 // console.log("Second fraction result is:", secondFraction);
 // console.log("Fraction " + fractionResult[0] + "with a value of " + fractionResult[1] + " is the biggest.");
 
-// ------------------------fx setup and calls----------------------------------------------------
-// 1. fx name(params, params){}
-function nameFunction(number1, number2) {
-    // no need to declare number1 and number2 locally in the fx
-    var sum = number1 * number2;
-    var value = "";
-    if (sum > 20) {
-        value = "The value is greater than 20";
-        return value;
-    } else if (sum > 20) {
-        value = "The value is less than 20";
-        return value;
-    }
-    // console.log(sum);
-    // return sum;
+// ------------------------fx setup and calls fx call in a fx----------------------------------------------------
 
-    // return value needs to be the last line in the codeblock of the fx, the fx is done after the return value
-    return value;
-}
 // declare and initialize vars in same order as they'll be passed into the fx
 var num1 = 3;
 var num2 = 5;
 // call and store
-var result = nameFunction(num1, num2);
+var caughtVar = nameFunction(num1, num2);
 // 2. args
 
-// function calls w/args can use vars with values stored
 
-// nameFunction(8, 8);
-// nameFunction(num1, num2);
-
-// use returned value
-// print
-// console.log(result);
-// or
-// if (result == 64){
-//     console.log("The value of result does equal " + result)
-// }
-// or
-if (result == "") {
+if (caughtVar == "") {
     console.log("The value was less than 10, so the value never changed")
+} else {
+    console.log(caughtVar);
 }
+// 1. fx name(params, params){}
+function nameFunction(number1, number2) {
+    // no need to declare number1 and number2 locally in the fx
+    var sum = number1 * number2;
+    var catchVar = anotherFunction(sum);
 
-// 3.
+    // return value needs to be the last line in the codeblock of the fx, the fx is done after the return value
+    return catchVar;
+}
+// function to be called from inside a fx
+function anotherFunction(sumVal) {
+    var value = "";
+    if (sumVal > 10) {
+        value = "The value is greater than 10";
+
+    } else {
+        value = "The value is less than 10";
+
+    }
+    return value;
+}
 
 
