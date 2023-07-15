@@ -1,0 +1,57 @@
+-------------------------------HTML/CSS----------------------------------
+//1. Create another webpage and call it contactUs.html, provide the proper head elements,
+ and add a title tag with an appropriate title to compliment your website’s theme and topic. DONE
+
+//2. Ensure the CSS theme carries over to the new page. DONE
+
+//3. On the new page, create a basic form that fits the theme for your website. This will be a contact form with additional inputs 
+for requesting items for purchase. The form must contain the following elements: (Make sure you add id's)
+//a. At least two text inputs
+//b. At least two radio buttons
+//c. At least three checkboxes, representing items to purchase. Each must have a value attribute with a numerical value assigned to it.
+  The numerical values will represent the price of the items.  Do not use the same price for any two items.
+//d. One drop-down list with at least two options
+//e. A text area for entering a message.
+//f. Two buttons for resetting and submitting the form. DONE
+
+//4.Do not use the HTML "required" keyword for any of the form inputs
+a. can use other options to validate inputs. DONE
+
+//5. Create a new JavaScript file and name it formValidation.js.  Place the new script file into your scripts folder.
+ Utilize the proper techniques to connect the new script to the contact us page. DONE
+
+---------------------------------JavaScript--------------------------------
+
+1. Do not use any anonymous functions
+
+2. Create an event listener for the form.  It will listen for the form’s submit event and trigger Function 1 detailed below.
+
+3. Create at least three functions:
+
+	a. Function 1 details: This function will be invoked by the form’s submit event listener.  It should prevent the contactUs.html page from reloading.
+	  It will be responsible for calling functions 2 and 3 (detailed below), as well as displaying each of the form’s input values and the total 
+	  returned from the calculation function (Function 3) in the browser’s console. 
+
+		1. Calling Function 2:  If Function 2 returns true, Function 1 should continue by calling Function 3 and displaying the form’s input
+		 values in the browser’s console. Otherwise, exit this function by returning.  Note: If validation fails (Function 2 returns false),
+		  the script should NOT call Function 3 or display output in the browser’s console.
+
+		2. Calling Function 3:  Function 3 should only be called if validation succeeds (Function 2 returned true).
+		  Be sure to store the result of calling Function 3 so that you can display the result of the calculation.
+
+	b. Function 2 details: This function will be responsible for validating at least two inputs on the form.
+	  At a minimum, the page will require the two text inputs to be filled in.  For validation, this function will check each required text input’s value.
+	    If a text input is empty, the function will alert the user that the specific text input is empty and set focus to the same empty text input.
+		  If at any point validation fails, this function will return false.  If validation is successful, this function will return true. 
+
+	c. Function 3 details:  This function will be responsible for performing any mathematical calculations for the form.
+	  At a minimum, this function will retrieve values from the form for checkboxes that are checked and then total the values.
+	    If you have included any other form elements that deal with pricing, ensure they are also included in the calculation.
+		  This function will return the result of the calculation(s).
+
+4. Give each of the three functions a meaningful name.  A meaningful name should describe what the function does when it executes, or what its purpose is.
+
+***NOTES: Function 1 is responsible for all output to the browser’s console.  Do not log output to the browser's console from Function 2 or 3 unless
+ it is for testing purposes.  Code that is meant for testing purposes should be commented accordingly, and the line(s) of JavaScript should either be
+  commented out or removed completely from the script prior to submission.  Large sections of code that are commented out should be removed from the
+   script prior to submission.***

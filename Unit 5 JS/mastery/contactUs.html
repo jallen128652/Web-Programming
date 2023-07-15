@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body class="body_content">
+    <header class="head">
+      <head>
+        <!-- character encoding -->
+        <meta charset="UTF-8" />
+        <!-- Page description -->
+        <meta name="description" contents="Contact us" />
+        <!-- Viewport settings to scale for device sizes -->
+        <meta
+          name="viewport"
+          contents="width=device-width, initial-scale=1.0"
+        />
+        <!-- Title for the tab bar -->
+        <title>Contact us</title>
+        <!-- linking css page for styling -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- adding google font link -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+          rel="stylesheet"
+        />
+        <!-- javascript call -->
+        <!-- <script src="Javascript/script.js" defer></script> -->
+        <!-- <script src="Javascript/stringsOperatorsLoops.js" defer></script> -->
+        <!-- <script src="Javascript/evenOrOdd.js" defer></script> -->
+        <!-- <script src="Javascript/arraysTryCatch.js" defer></script> -->
+        <script src="Javascript/formValidation.js" defer></script>
+      </head>
+      <h1 class="heading">Jim's Favorite Dad Jokes</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="contactUs.html">Contact Page</a></li>
+          <li><a href="##">Gallery</a></li>
+          <li><a href="mailto:jallen128652@mymail.tstc.edu">Send email</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="form">
+        <form method="get">
+          <div>
+            <h2>Order Form</h2>
+            <ul>
+              <legend>Contact Information</legend>
+              <li>
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text" />
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="me@example.com"
+                />
+              </li>
+              <li>
+                <label for="address">Address:</label>
+                <input
+                  name="address"
+                  id="address"
+                  type="text"
+                  placeholder="ex: 6 Bushway dr. Dallas"
+                />
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <legend></legend>
+              <li>
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                  <option value="CS">--Choose State--</option>
+                  <option value="TX">Texas (8.25% tax)</option>
+                  <option value="OR">Oregon (no sales tax)</option>
+                </select>
+              </li>
+              <li>
+                <label for="zip">Zip Code:</label>
+                <input
+                  name="zip"
+                  id="zip"
+                  type="text"
+                  placeholder="ex: 77605"
+                />
+              </li>
+              <li>
+                <label for="phone">Phone:</label>
+                <input
+                  name="phone"
+                  id="phone"
+                  type="text"
+                  placeholder="ex: 8885551234"
+                />
+              </li>
+            </ul>
+
+            <fieldset>
+              <legend>Shipping?</legend>
+              <input
+                id="s_pickup"
+                name="ship"
+                type="radio"
+                value="pickup"
+                checked
+              />
+              <label for="t_pickup">Pickup (no charge)</label><br />
+
+              <input id="s_usps" name="ship" type="radio" value="usps" />
+              <label for="t_usps">USPS ($10, takes ~1 week)</label><br />
+
+              <input id="s_fedex" name="ship" type="radio" value="fedex" />
+              <label for="t_fedex">Fedex ($7, takes ~3 days)</label><br />
+            </fieldset>
+
+            <fieldset>
+              <legend>What would you like to order?</legend>
+              <input id="hat" name="hat" type="checkbox" value="15" />
+              <label for="hat">Jim's Dad Jokes Trucker Hat $15</label><br />
+              <input id="mug" name="mug" type="checkbox" value="5" />
+              <label for="mug">Jim's Dad Jokes Coffee Mug $5</label><br />
+              <input id="koozie" name="koozie" type="checkbox" value="3" />
+              <label for="koozie">Jim's Dad Jokes Beer Koozie $3</label><br />
+              <p>***Limited supplies 1 of each per customer max***</p>
+            </fieldset>
+          </div>
+
+          <label for="textarea">Comments:</label>
+          <textarea name="textarea" id="textarea" cols="35" rows="3"></textarea>
+          <br />
+
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+        </form>
+      </div>
+      <div id="results"></div>
+    </main>
+    <footer class="foot">
+      <!-- Copyright info -->
+      <p>
+        Copyright 2023 -
+        <a href="mailto:jallen128652@mymail.tstc.edu">James Allen </a
+        >&copy;<br />
+        1(800)555-5555
+      </p>
+    </footer>
+  </body>
+</html>
