@@ -1,0 +1,371 @@
+_________________FIND VALUES_____________________________________________________
+--------------------text fields-----------------------------
+ inspect any element of the website and get the id, paste the id into this function in console. 
+ will print full element. document.getElementByIF("idName")
+ will print value. document.getElementById("idName").value
+ will change value. document.getElementById("idName").value = newValue
+ use quotes for strings and just numbers for numbers etc.
+ can search also by document.forms[0] cycle through the array numbers till you find the form you want.
+ can also search by document.getElementById("") after inspecting the top of the form and finding the <form> tag in the html and copying the id
+ document.getElementById("").elements will print all elements in the form to console
+ can also access it by the array method  document.getElementById("").elements[0] 
+ can also call by name, find name with inspect and put it at the end document.getElementById("").exampleName
+
+-------------------select boxes-----------------------------
+note the value can be different from the label inside the option tag. you can search and update select boxes the same way as text fields using document.getElementById("") etc, but to update it you need to know that value attribute.
+document.getElementById("s-state").options gives an array of all the options
+document.getElementById("s-state").selectedIndex will show the index number currently selected. Note idexes start with 0
+
+example code:
+(function() {
+"use strict";
+var selectedIdx = document.getElementById("s-state").selectedIndex;
+var selectedValue = document.getElementById("s-state").options[selectedIdx].value;
+// or simply retrieve the value like this
+document.getElementById("s-state").value;
+// update the value
+document.getElementById("s-state").value = "NH";
+// test
+console.log(selectedValue);
+console.log(selectedIdx);
+console.log(document.getElementById("s-state").value)
+})();
+
+------------------------------------radio buttons and check boxes------------------
+to check if a check box is checked lol: 
+document.getElementById("idName").checked
+it returns a bool value
+
+for radio buttons to check which one is selected:
+		format:	('html tag[name = radioName]:sudoSelector')
+document.querySelector('input[name = r_method]:checked').value
+
+to check the entire radio button input:
+document.querySelectorAll('input[name = r_method]')
+
+to check the radio button of the one that is checked:
+document.querySelectorAll('input[name=r_method]:checked')
+pulls all the date though
+
+______________________________change submission event_______________________________
+
+-------------------------------add event listener-----------------------------------
+ example code for submission events on forms
+(function() {
+"use strict";
+
+// call: document.getElementById(form id).addEventListener(inputTypeName, calls function we execute);
+document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+// define fx that's called, pass in arg called an event
+function estimateTotal(event){
+// prevents default action from happening
+    event.preventDefault();
+// actual action in the fx
+    console.log('You submitted the form.');
+}
+
+})();
+
+-----------------------------start to validate input----------------------------------
+
+can put required into the html select tag <select id="s-state" required>
+not every browser supports required
+
+or force it in a fx ex:
+
+(function() {
+"use strict";
+
+//                          form id              (inputType, calls function we execute)
+document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+// define fx that's called, pass in arg called an event
+function estimateTotal(event){
+    // prevents default action when event takes place
+    event.preventDefault();
+    // create a var to simplify
+    var state = document.getElementById('s-state');
+    // if (var.value is empty)
+    if (state.value === ''){
+        alert('Please choose your shipping state.');
+        // places focus on what needs action in the browser
+        state.focus();
+    }
+}
+
+})();
+
+-----------------------disable a field until required is met------------------------------
+
+example code:
+
+(function() {
+"use strict";
+
+    // create a var to simplify
+var state = document.getElementById('s-state');
+
+// new listener for disable button until required actions done 
+                    //   (is my DOM ready, anonymous fx)
+document.addEventListener('DOMContentLoaded', function(){
+//                          form id              (inputType, calls function we execute)
+    document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+    //*************disable estimate button until required fields completed*************
+
+     // declare var
+     var estimateBtn = document.getElementById('btn-estimate');
+    // disable button on page load
+    estimateBtn.disabled = true;
+    // evaluate condition
+    state.addEventListener('change', function(){
+        if (state.value === ''){
+            // grays out btn 
+            estimateBtn.disabled = true;
+        } else {
+            estimateBtn.disabled = false;
+        }
+    }); 
+
+});
+
+
+// define fx that's called, pass in arg called an event
+function estimateTotal(event){
+    // prevents default action when event takes place
+    event.preventDefault();
+
+    // if (var.value is empty)
+    if (state.value === ''){
+        alert('Please choose your shipping state.');
+        // places focus on what needs action in the browser
+        state.focus();
+    }
+}
+
+})();
+
+------------------------retrieve all data from cart-----------------------
+example code:
+
+(function() {
+"use strict";
+
+var state = document.getElementById('s-state');
+// is DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+	// call to fn estimate total with event listener
+	document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+	
+	var btnEstimate = document.getElementById('btn-estimate');
+	// disable on page load
+	btnEstimate.disabled = true;
+	// re-enable when conditions met
+	state.addEventListener('change', function() {
+	
+		if (state.value === '') {
+			btnEstimate.disabled = true;
+		} else {
+			btnEstimate.disabled = false;
+		}
+	
+	});
+});
+
+function estimateTotal(event) {
+	// prevent default behavior on load
+	event.preventDefault();
+	// alert window and focus if state not selected and press estimate btn
+	if (state.value === '') {
+		alert('Please choose your shipping state.');
+		
+		state.focus();
+	}
+	// declare vars and collect values
+	var itemBball = document.getElementById('txt-q-bball').value, 
+	    itemJersey = document.getElementById('txt-q-jersey').value, 
+	    itemPower = document.getElementById('txt-q-power').value,
+		shippingState = state.value,
+		shippingMethod = document.querySelector('[name = r_method]:checked').value;
+
+	console.log(itemBball, itemJersey, itemPower, shippingState, shippingMethod);
+
+}
+
+})();
+
+------------------------------------total up shopping cart and fix errors---------------------------
+check what each var returns is math aint mathing!!!
+
+example code:
+
+(function () {
+	"use strict";
+
+	var state = document.getElementById('s-state');
+	// is DOM ready
+	document.addEventListener('DOMContentLoaded', function () {
+		// call to fn estimate total with event listener
+		document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+
+		var btnEstimate = document.getElementById('btn-estimate');
+		// disable on page load
+		btnEstimate.disabled = true;
+		// re-enable when conditions met
+		state.addEventListener('change', function () {
+
+			if (state.value === '') {
+				btnEstimate.disabled = true;
+			} else {
+				btnEstimate.disabled = false;
+			}
+
+		});
+	});
+
+	function estimateTotal(event) {
+		// prevent default behavior on load
+		event.preventDefault();
+		// alert window and focus if state not selected and press estimate btn
+		if (state.value === '') {
+			alert('Please choose your shipping state.');
+
+			state.focus();
+		}
+		// declare vars and collect values					value has a 2nd arg called a radix for the base number system when converting values
+		// note the or 0 at the end, incase parseInt doesn't return correctly. Basically setting default values
+		var itemBball = parseInt(document.getElementById('txt-q-bball').value, 10) || 0,
+			itemJersey = parseInt(document.getElementById('txt-q-jersey').value, 10) || 0,
+			itemPower = parseInt(document.getElementById('txt-q-power').value, 10) || 0,
+			shippingState = state.value,
+			shippingMethod = document.querySelector('[name = r_method]:checked').value || "";
+		// declare vars for total
+		var totalQty = itemBball + itemJersey + itemPower,
+			shippingCostPer,
+			shippingCost,
+			taxFactor = 1,
+			estimate,
+			totalItemPrice = (90 * itemBball) + (25 * itemJersey) + (30 * itemPower);
+		// tax rate modifier
+		if (shippingState === 'CA') {
+			taxFactor = 1.075
+		}
+		// calc shipping
+		switch (shippingMethod) {
+			case 'usps':
+				shippingCostPer = 2;
+				break;
+			case 'ups':
+				shippingCostPer = 3;
+				break;
+			default:
+				shippingCostPer = 0;
+				break;
+		}
+		shippingCost = shippingCostPer * totalQty;
+		// estimate var expression									toFixed(arg) forces decimal precision							
+		estimate = '$' + ((totalItemPrice * taxFactor) + shippingCost).toFixed(2);
+
+		document.getElementById('txt-estimate').value = estimate;
+	}
+
+})();
+
+_____________________________get and set innerHTML_________________________________
+updated the div below the estimate field
+
+code example:
+
+(function () {
+	"use strict";
+
+	var state = document.getElementById('s-state');
+	// is DOM ready
+	document.addEventListener('DOMContentLoaded', function () {
+		// call to fn estimate total with event listener
+		document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+
+		var btnEstimate = document.getElementById('btn-estimate');
+		// disable on page load
+		btnEstimate.disabled = true;
+		// re-enable when conditions met
+		state.addEventListener('change', function () {
+
+			if (state.value === '') {
+				btnEstimate.disabled = true;
+			} else {
+				btnEstimate.disabled = false;
+			}
+
+		});
+	});
+
+	function estimateTotal(event) {
+		// prevent default behavior on load
+		event.preventDefault();
+		// alert window and focus if state not selected and press estimate btn
+		if (state.value === '') {
+			alert('Please choose your shipping state.');
+
+			state.focus();
+		}
+		// declare vars and collect values					value has a 2nd arg called a radix for the base number system when converting values
+		// note the or 0 at the end, incase parseInt doesn't return correctly. Basically setting default values
+		var itemBball = parseInt(document.getElementById('txt-q-bball').value, 10) || 0,
+			itemJersey = parseInt(document.getElementById('txt-q-jersey').value, 10) || 0,
+			itemPower = parseInt(document.getElementById('txt-q-power').value, 10) || 0,
+			shippingState = state.value,
+			shippingMethod = document.querySelector('[name = r_method]:checked').value || "";
+		// declare vars for total
+		var totalQty = itemBball + itemJersey + itemPower,
+			shippingCostPer,
+			shippingCost,
+			taxFactor = 1,
+			estimate,
+			totalItemPrice = (90 * itemBball) + (25 * itemJersey) + (30 * itemPower);
+		// tax rate modifier
+		if (shippingState === 'CA') {
+			taxFactor = 1.075
+		}
+		// calc shipping
+		switch (shippingMethod) {
+			case 'usps':
+				shippingCostPer = 2;
+				break;
+			case 'ups':
+				shippingCostPer = 3;
+				break;
+			default:
+				shippingCostPer = 0;
+				break;
+		}
+		shippingCost = shippingCostPer * totalQty;
+		// estimate var expression									toFixed(arg) forces decimal precision							
+		estimate = '$' + ((totalItemPrice * taxFactor) + shippingCost).toFixed(2);
+
+		document.getElementById('txt-estimate').value = estimate;
+		// id for div below estimate 
+		var results = document.getElementById('results');
+		// 
+		results.innerHTML = 'Total items: ' + totalQty + '<br>';
+		results.innerHTML += 'Total shipping: $' + shippingCost.toFixed(2) + '<br>';
+		results.innerHTML += 'Tax: ' + ((taxFactor - 1) * 100).toFixed(2) + '% (' + shippingState + ')' + '<br>';
+
+	}
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
