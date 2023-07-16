@@ -44,7 +44,7 @@
     </header>
     <main class="container">
       <div class="form">
-        <form method="get">
+        <form method="get" id="order">
           <div>
             <h2>Order Form</h2>
             <ul>
@@ -69,6 +69,15 @@
                   id="address"
                   type="text"
                   placeholder="ex: 6 Bushway dr. Dallas"
+                />
+              </li>
+              <li>
+                <label for="city">City:</label>
+                <input
+                  name="city"
+                  id="city"
+                  type="text"
+                  placeholder="ex: Dallas"
                 />
               </li>
             </ul>
@@ -122,7 +131,7 @@
               <label for="t_fedex">Fedex ($7, takes ~3 days)</label><br />
             </fieldset>
 
-            <fieldset>
+            <fieldset id="item" name="c_item">
               <legend>What would you like to order?</legend>
               <input id="hat" name="hat" type="checkbox" value="15" />
               <label for="hat">Jim's Dad Jokes Trucker Hat $15</label><br />
@@ -140,9 +149,10 @@
 
           <button type="submit">SUBMIT</button>
           <button type="reset">RESET</button>
+          <div id="results"></div>
         </form>
       </div>
-      <div id="results"></div>
+      
     </main>
     <footer class="foot">
       <!-- Copyright info -->

@@ -22,7 +22,7 @@ a. can use other options to validate inputs. DONE
 
 ---------------------------------JavaScript--------------------------------
 
-1. Do not use any anonymous functions
+//1. Do not use any anonymous functions
 
 2. Create an event listener for the form.  It will listen for the form’s submit event and trigger Function 1 detailed below.
 
@@ -55,3 +55,15 @@ a. can use other options to validate inputs. DONE
  it is for testing purposes.  Code that is meant for testing purposes should be commented accordingly, and the line(s) of JavaScript should either be
   commented out or removed completely from the script prior to submission.  Large sections of code that are commented out should be removed from the
    script prior to submission.***
+
+code for if we want to display to the acual webpage. I built a div for the purpose
+//  if printing to the page
+//    var results1 = document.getElementById('results');
+// // print contact details for the customer
+    // results1.innerHTML = "Customer name is: " + document.getElementById('name').value + '<br>';
+    // results1.innerHTML += "Email: " + document.getElementById('email').value + '<br>';
+    // results1.innerHTML += "Address: <br>" + document.getElementById('address').value + "<br>" +
+    //     document.getElementById('city').value + ", " + document.getElementById('state').value + ". " +
+    //     document.getElementById('zip').value + '<br>';
+    // results1.innerHTML += "Phone number: " + document.getElementById('phone').value + '<br>';
+    // results1.innerHTML += "Your total is: $" + total.toFixed(2);
