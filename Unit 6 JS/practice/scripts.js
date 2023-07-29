@@ -217,3 +217,108 @@ function reveal(e) {
 CTA.onclick = reveal;
 
 // ------------------------add and use event listeners------------------------------
+// same functionality as above but with event listeners so you can do more than 1 action per event
+const CTA = document.querySelector(".cta a");
+const ALERT = document.querySelector("#booking-alert");
+
+CTA.classList.remove("hide");
+ALERT.classList.add("hide");
+
+function reveal(e) {
+    e.preventDefault();
+    CTA.classList.toggle("hide");
+    ALERT.classList.toggle("hide");
+}
+
+// event listener methods
+// args (the event, fx(), false)
+CTA.addEventListener("click", reveal, false);
+CTA.addEventListener("click", function () { console.log("The button was clicked") }, false);
+
+// ***example html and js code for eventlisteners***
+// html
+< !DOCTYPE html >
+    <html lang="en-US">
+
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <title>An empty page</title>
+                    <script src="JS/tracker-script.js" async></script>
+                    <style>
+                        body {
+                            width: 100vw;
+                        height: 100vh;
+    }
+                        .circle {
+                            position: absolute;
+                        top: 1px;
+                        width: 50px;
+                        height: 50px;
+                        color: transparent;
+                        border: 2px solid red;
+                        border-radius: 50%;
+    }
+                    </style>
+                </head>
+                <body>
+                    <div class="circle"></div>
+                </body>
+            </html>
+        </head>
+    </html>
+
+// Javascript
+// declare consts
+const AREA = document.body;
+const CIRCLE = document.querySelector('.circle');
+
+var windowWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+
+function mouseCoordinates(e) {
+    // Capture the event object (mouse movement).
+    // Get X coordinate (distance from left viewport edge) via clientX property.
+    // Take total window width, subtract current coordinate and width of circle.
+    // Do the same for Y coordinate (distance from top viewport edge).
+    var horizontalPosition = windowWidth - e.clientX - 26;
+    var verticalPosition = windowHeight - e.clientY - 26;
+
+    // Set horizontal and vertical position.
+    CIRCLE.style.left = horizontalPosition + 'px';
+    CIRCLE.style.top = verticalPosition + 'px';
+}
+
+function changeColorOnTouch() {
+    CIRCLE.style.backgroundColor = "green";
+    CIRCLE.style.borderColor = "green";
+}
+
+// When the mouse moves, run the mouseCoordinates function.
+AREA.addEventListener('mousemove', mouseCoordinates, false);
+
+// When the mouse touches the circle, run the changeColorOnTouch function.
+CIRCLE.addEventListener('mouseenter', changeColorOnTouch, false);
+
+// When the mouse leaves the circle, remove inline styles with an anonymous function.
+CIRCLE.addEventListener('mouseleave', function () { CIRCLE.removeAttribute("style"); }, false);
+
+// -------------------------------pass args via event listeners----------------------------------
+
+const CTA = document.querySelector(".cta a");
+const ALERT = document.querySelector("#booking-alert");
+
+CTA.classList.remove("hide");
+ALERT.classList.add("hide");
+// note e is passed in from the anon fx call to the reveal fx call and then into the reveal fx()
+function reveal(e, current) {
+    e.preventDefault();
+    // add turnery operator
+    // current is the clicked object or CTA link
+    current.innerHTML == "Book Now!" ? CTA.innerHTML = "Oooops" : CTA.innerHTML = "Book Now!";
+    ALERT.classList.toggle("hide");
+}
+// pass reveal into anonymous fx() 
+CTA.addEventListener('click', function (e) { reveal(e, this); }, false);
+CTA.addEventListener('click', function () { console.log("The button was clicked!") }, false);
+// you can pass in comma separated args into fx() and fxCalls()
