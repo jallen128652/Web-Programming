@@ -163,3 +163,29 @@ captionElement.append(altText);
 FEATURED.appendChild(captionElement);
 // clear alt text from img
 THEIMAGE.setAttribute("alt", "");
+
+// --------------------------add inline CSS to an element---------------------
+/// js won't write to css only individual element
+// see styles applied to element by calling in console:
+document.querySelector(".cta a").style
+// result no inline css properties
+// CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}
+// assign specific style property by targeting directly
+document.querySelector(".cta a").style.color = "green";
+// results changes color of Book Now! to green and updates html to this:
+// <a href="#" style="color: green;">Book Now!</a> 
+// hyphens convert to camelCase, example background-color:
+document.querySelector(".cta a").style.backgroundColor = "blue";
+// results
+//<a href="#" style="color: green; background-color: blue;">Book Now!</a>
+// ********grouping style properties together in a single string*******
+document.querySelector(".cta a").style.cssText = "padding: 1em; color: white; background-color: red;";
+// note style is an attribute and value is typical css values "color: red;"
+// we can use .hasAttribute(); .getAttribute(); .setAttribute(); and .removeAttribute() methods with style
+//                              note args    ("attribute name", "css value")
+//                              note can use multiple values separated by spaces
+// note this removes all previous inline css values from the attribute and replaces them
+document.querySelector(".cta a").setAttribute("style", "padding: 2em; color: green; background-color: blue;");
+// note inline styles override what the style sheet is doing
+// in most cases, best practice is to create CSS rules and use JS to manage these classes to apply the rules
+// to the element.
