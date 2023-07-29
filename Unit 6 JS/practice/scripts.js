@@ -189,3 +189,31 @@ document.querySelector(".cta a").setAttribute("style", "padding: 2em; color: gre
 // note inline styles override what the style sheet is doing
 // in most cases, best practice is to create CSS rules and use JS to manage these classes to apply the rules
 // to the element.
+
+// -----------------------DOM events and event handling----------------------------------
+// Browser level events: Browser behavior(load, window resize, etc.)
+// DOM level events: Content interaction(click, focus, submit, etc.)
+// any event the browser reacts to is an event you can hook into and modify with JS
+// ----------------------trigger functions with event handlers-------------------
+// declare consts
+const CTA = document.querySelector(".cta a");
+const ALERT = document.querySelector("#booking-alert");
+
+// remove hide class from button, add it to the alert
+CTA.classList.remove("hide");
+ALERT.classList.add("hide");
+
+// function to toggle the hide class on and off
+// e represents an event object
+function reveal(e) {
+    // prevents the page from reloading with each event 
+    e.preventDefault();
+    CTA.classList.toggle("hide");
+    ALERT.classList.toggle("hide");
+}
+
+// eventhandler
+// by leaving off the parenthesis on the fx, it keeps it from running as soon as the page loads
+CTA.onclick = reveal;
+
+// ------------------------add and use event listeners------------------------------
