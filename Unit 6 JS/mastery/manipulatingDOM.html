@@ -1,74 +1,113 @@
 <!--Document Object Model-->
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Manipulating the DOM</title>
     <script src="Javascript/scriptsDOM.js" async></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
-    <link rel="stylesheet" href="CSS/styleDOM.css">
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i"
+      type="text/css"
+      media="all"
+    />
+    <link rel="stylesheet" href="CSS/styleDOM.css" />
+  </head>
 
-
-</head>
-
-
-<body>
+  <body>
     <!--Header-->
     <header class="headings">
-        <h1>Creating A Webpage With JavaScript</h1>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home Page</a></li>
-              <li><a href="contactUs.html">Contact Page</a></li>
-              <li><a href="manipulatingDOM.html">DOM page</a></li>
-              <li><a href="##">Gallery</a></li>
-              <li><a href="mailto:jallen128652@mymail.tstc.edu">Send email</a></li>
-            </ul>
-          </nav>
+      <h1>Creating A Webpage With JavaScript</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="contactUs.html">Contact Page</a></li>
+          <li><a href="manipulatingDOM.html">DOM page</a></li>
+          <li><a href="##">Gallery</a></li>
+          <li><a href="mailto:jallen128652@mymail.tstc.edu">Send email</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- The Main Section-->
     <main class="main">
-       <!-- The intro and Main Paragraph-->
-        <article class="intro">
-            <p>Schooling is tough but also fulfilling. If obtaining a dream was easy then it definitely wasn't earned. My life can be shaped but only with the correct tools. I must make the commitment to succeed and proceed with my goals and overcome any obstacles that I will be found in my path during my journey
-            </p>
-        </article><!-- intro -->
-        <section class="main-pitch">
-            <div class="three-reasons centered">
-                <figure class="reason">
+      <!-- The intro and Main Paragraph-->
+      <article class="intro">
+        <p>
+          Schooling is tough but also fulfilling. If obtaining a dream was easy
+          then it definitely wasn't earned. My life can be shaped but only with
+          the correct tools. I must make the commitment to succeed and proceed
+          with my goals and overcome any obstacles that I will be found in my
+          path during my journey
+        </p>
+      </article>
+      <!-- intro -->
+      <section class="main-pitch">
+        <div class="three-reasons centered">
+          <figure class="reason">
+            <img
+              src="Images/disGolfSmall-500.jpg"
+              alt=""
+              data-type="reason"
+              width="615"
+              id="firstImage"
+            />
 
-                    <img src="Images/disGolfSmall-500.jpg" alt="" data-type="reason" width="615" id="firstImage" />
+            <figcaption>
+              <h3 class="content-title">An Office With A View</h3>
+              <p id="firstText">
+                Every office should have a view. There is a time to work and a
+                time to play. Your career will feel like an always round of
+                playtime.
+              </p>
+              <button id="ColorChanging">Learn More</button>
+            </figcaption>
+          </figure>
+          <!-- .reason -->
+          <figure class="reason">
+            <img
+              src="Images/musicSmall-500.jpg"
+              width="615px"
+              alt=""
+              data-type="reason"
+              id="secondImage"
+            />
 
-                    <figcaption>
-                        <h3 class="content-title">An Office With A View</h3>
-                        <p id="firstText">Every office should have a view. There is a time to work and a time to play. Your career will feel like an always round of playtime.</p>
-                        <button id="ColorChanging">Learn More</button>
-                    </figcaption>
-                </figure><!-- .reason -->
-                <figure class="reason">
+            <figcaption>
+              <h3 class="content-title">Crafting The Heart</h3>
+              <p id="secondText">
+                Building something with your hands from a scrap piece of wood is
+                exciting. Watching something come to life from another life is
+                exhilarating.
+              </p>
+              <button id="ColorChanged">Learn More</button>
+            </figcaption>
+          </figure>
+          <!-- .reason -->
+          <figure class="reason">
+            <img
+              src="Images/programmingSmall-500.jpg"
+              alt=""
+              data-type="reason"
+              width="615px"
+              id="thirdImage"
+            />
 
-                    <img src="Images/musicSmall-500.jpg" width="615px" alt="" data-type="reason" id="secondImage" />
-
-                    <figcaption>
-                        <h3 class="content-title">Crafting The Heart</h3>
-                        <p id="secondText">Building something with your hands from a scrap piece of wood is exciting. Watching something come to life from another life is exhilarating.</p>
-                        <button id="ColorChanged">Learn More</button>
-                    </figcaption>
-                </figure><!-- .reason -->
-                <figure class="reason">
-
-                    <img src="Images/programmingSmall-500.jpg" alt="" data-type="reason" width="615px" id="thirdImage" />
-
-                    <figcaption>
-                        <h3 class="content-title">Coding the Future</h3>
-                        <p id="thirdText">Late hours of creating the future from a canvas always take time. Falling into that zone is always around the corner. Shaping my students for their future and their family.</p>
-                        <button id="ColorChange">Learn More</button>
-                    </figcaption>
-                </figure><!-- .reason -->
-            </div><!-- .three-reasons centered -->
-        </section><!-- .main-pitch -->
-
+            <figcaption>
+              <h3 class="content-title">Coding the Future</h3>
+              <p id="thirdText">
+                Late hours of creating the future from a canvas always take
+                time. Falling into that zone is always around the corner.
+                Shaping my students for their future and their family.
+              </p>
+              <button id="ColorChange">Learn More</button>
+            </figcaption>
+          </figure>
+          <!-- .reason -->
+        </div>
+        <!-- .three-reasons centered -->
+      </section>
+      <!-- .main-pitch -->
     </main>
-
-</body></html>
+  </body>
+</html>
