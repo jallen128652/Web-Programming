@@ -322,3 +322,56 @@ function reveal(e, current) {
 CTA.addEventListener('click', function (e) { reveal(e, this); }, false);
 CTA.addEventListener('click', function () { console.log("The button was clicked!") }, false);
 // you can pass in comma separated args into fx() and fxCalls()
+
+// ---------------------this code allows you to inject scripts to add srcset to images-----------------
+// not it requires you to create the data-type attribute for the images and add the values such as showcase
+// This scripts injects the correct size srcset for the viewport size
+// create array that contains all images on the page
+const IMAGES = document.querySelectorAll("img");
+// create object to store data-type attribute
+const SIZES = {
+    showcase: "100vw",
+    reason: "(max-width: 799px) 100vw, 372px",
+    feature: "(max-width: 799px) 100vw, 558px",
+    story: "(max-width: 799px) 100vw, 670px",
+};
+
+// function for generating srcset
+// imgSrc is passed in from the for loop
+function makeSrcset(imgSrc) {
+    let markup = [];
+    // smallest img size and sizes are multiples of 400
+    let width = 400;
+
+    // for loop to loop through the 5 different image sizes
+    for (let i = 0; i < 5; i++) {
+        // creates a full length url to the img again
+        markup[i] = imgSrc + "-" + width + ".jpg " + width + "w";
+        // increments by 400 each loop
+        width += 400;
+    }
+    // join() gives a comma separated list
+    return markup.join();
+}
+
+
+// for loop to cycle through all images
+for (let i = 0; i < IMAGES.length; i++) {
+    // stores in imgSrc the attribute from each image
+    let imgSrc = IMAGES[i].getAttribute("src");
+    // strip off the last 8 chars of the attribute
+    imgSrc = imgSrc.slice(0, -8);
+    // calls makeSrcset and passes in imgSrc
+    let srcset = makeSrcset(imgSrc);
+    // final implementation add srcset to images[i]
+    // grabs current image element and adds srcset attribute and value
+    IMAGES[i].setAttribute("srcset", srcset);
+
+    // get value of data-type attribute
+    let type = IMAGES[i].getAttribute("data-type");
+    // using type to modify sizes
+    let sizes = SIZES[type];
+    // final implementation add sizes to images[i]
+    // grabs current image element and adds sizes attribute and value
+    IMAGES[i].setAttribute("sizes", sizes);
+}
