@@ -13,14 +13,22 @@ newPrint.textContent = newText;
 // const firstPic = document.getElementById("firstImage").src;
 // const secondPic = document.getElementById("secondImage").src;
 // const thirdPic = document.getElementById("thirdImage").src;
+// console.log(firstPic);
+// console.log(secondPic);
+// console.log(thirdPic);
 // create new consts to store new url to the img src
 const newFirstPic = document.getElementById("firstImage").src = "Images/codingSmall-500.jpg";
 const newSecondPic = document.getElementById("secondImage").src = "Images/cadDesignSmall-500.jpg";
 const newThirdPic = document.getElementById("thirdImage").src = "Images/roboticsSmall-500.jpg";
 
 // setup array for image titles
-let titles = document.querySelectorAll(".content-title").innerHTML; //not correct yet
-// change the paragraph for each image and adjust css to fit
+let titles = document.querySelectorAll(".content-title");
+// store new text in the titles by array index number
+titles[0].innerHTML = "Software Enginering";
+titles[1].innerHTML = "Computer Aided Design";
+titles[2].innerHTML = "Robotics";
+// change the description paragraph for each image to fit the new images
+
 
 // ------------------modify what each button does----------------------------
 // add click event listener
