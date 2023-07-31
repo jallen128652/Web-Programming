@@ -12,7 +12,7 @@ DONE. Download three images using unsplash.com or utilize three of your own orig
 DONE. Using JavaScript code only, replace each of the three original images found on the webpage with the three
  downloaded images. 
 
-Change the heading for each image using the querySelectorAll() method. (Hint: array)
+DONE. Change the heading for each image using the querySelectorAll() method. (Hint: array)
 
 Change the paragraph for each image so that it fits/compliments the new image.
 
