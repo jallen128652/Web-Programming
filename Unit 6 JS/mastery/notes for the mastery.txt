@@ -14,18 +14,18 @@ DONE. Using JavaScript code only, replace each of the three original images foun
 
 DONE. Change the heading for each image using the querySelectorAll() method. (Hint: array)
 
-Change the paragraph for each image so that it fits/compliments the new image.
+DONE. Change the paragraph for each image so that it fits/compliments the new image.
 
-You will see three buttons on the webpage at the bottom. Add functionality to the script so that when 
+DONE. You will see three buttons on the webpage at the bottom. Add functionality to the script so that when 
 each button is clicked, the header’s background color changes to a different color. Choose appropriate 
 colors.  If the new font color and new background color do not contrast well, you may need to change the
  header’s font color as well. (Hint: Event listeners and Functions)
 
-Remember: Each of these changes should be accomplished with JavaScript alone.  The only HTML code you can
+****Remember: Each of these changes should be accomplished with JavaScript alone.  The only HTML code you can
  directly modify in the manipulatingDOM.html page (if necessary) is the path for the image files, CSS file,
   and script file.  Do not change the HTML code or the CSS file code.
 
-Make sure you utilize the videos and the console window. If you can grab what you want from the HTML page
+****Make sure you utilize the videos and the console window. If you can grab what you want from the HTML page
  using JavaScript in the console window, then it should be straightforward  as to what needs to be added
   to your JavaScript file.  In other words, the process of trial and error is much quicker in the
    browser’s console than in the JavaScript file.

@@ -44,5 +44,22 @@ newPrint3.innerText = newDescription3;
 
 
 // ------------------modify what each button does----------------------------
-// add click event listener
-
+// declare consts
+const button1 = document.querySelector("#ColorChanging");
+const button2 = document.querySelector("#ColorChanged");
+const button3 = document.querySelector("#ColorChange");
+// add click event listener and use anon fx() to change style based on index of clicked button
+button1.addEventListener("click", function () {
+    header[0].style.backgroundColor = "red";
+    header[0].style.color = "white";
+}, false);
+button2.addEventListener("click", function () {
+    header[1].style.backgroundColor = "red";
+    header[1].style.color = "white";
+}, false);
+button3.addEventListener("click", function () {
+    header[2].style.backgroundColor = "red";
+    header[2].style.color = "white";
+}, false);
+// create consts var[] for the headers 
+const header = document.querySelectorAll(".content-title")
