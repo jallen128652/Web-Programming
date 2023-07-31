@@ -4,12 +4,12 @@ Things to modify using JavaScript and the DOM:
 DONE. The body paragraph for the webpage should be modified with an inspirational paragraph of at least four 
 sentences long.
 
-Download three images using unsplash.com or utilize three of your own original photos. Crop and optimize
+DONE. Download three images using unsplash.com or utilize three of your own original photos. Crop and optimize
  the downloaded (or original) images so that they match dimensions of the original webpage’s images.  
  Note:  If you crop each image to 2000 x 1500 and then change the image size to 615 x 461 72ppi, they 
  should match perfectly.
 
-Using JavaScript code only, replace each of the three original images found on the webpage with the three
+DONE. Using JavaScript code only, replace each of the three original images found on the webpage with the three
  downloaded images. 
 
 Change the heading for each image using the querySelectorAll() method. (Hint: array)

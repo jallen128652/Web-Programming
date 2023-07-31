@@ -10,12 +10,14 @@ newPrint.textContent = newText;
 
 // ------------------modify pics and figcaptions--------------------------
 // query the images by id to get url
-const firstPic = document.getElementById("firstImage").src;
-const secondPic = document.getElementById("secondImage").src;
-const thirdPic = document.getElementById("thirdImage").src;
-console.log(firstPic);
-console.log(secondPic);
-console.log(thirdPic);
+// const firstPic = document.getElementById("firstImage").src;
+// const secondPic = document.getElementById("secondImage").src;
+// const thirdPic = document.getElementById("thirdImage").src;
+// create new consts to store new url to the img src
+const newFirstPic = document.getElementById("firstImage").src = "Images/codingSmall-500.jpg";
+const newSecondPic = document.getElementById("secondImage").src = "Images/cadDesignSmall-500.jpg";
+const newThirdPic = document.getElementById("thirdImage").src = "Images/roboticsSmall-500.jpg";
+
 // setup array for image titles
 let titles = document.querySelectorAll(".content-title").innerHTML; //not correct yet
 // change the paragraph for each image and adjust css to fit
