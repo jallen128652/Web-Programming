@@ -1,7 +1,7 @@
 -------------------------------HTML/CSS----------------------------------
 Things to modify using JavaScript and the DOM:
 
-The body paragraph for the webpage should be modified with an inspirational paragraph of at least four 
+DONE. The body paragraph for the webpage should be modified with an inspirational paragraph of at least four 
 sentences long.
 
 Download three images using unsplash.com or utilize three of your own original photos. Crop and optimize
