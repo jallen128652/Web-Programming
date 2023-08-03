@@ -6,44 +6,6 @@
 .headings h1 {
   text-align: center;
 }
-/* --------------------------nav section-------------------- */
-nav {
-  text-align: center;
-}
-nav li {
-  display: inline-block;
-}
-nav li a {
-  color: darkblue;
-  font-size: 25px;
-  text-decoration-line: none;
-  font-family: "Roboto Mono", monospace;
-  padding: 15px 32px;
-  background-color: #21759b;
-  border: 5px solid black;
-}
-/* unvisited link */
-nav li a:link {
-  color: darkblue;
-}
-/* visited link */
-nav li a:visited {
-  color: black;
-}
-/* mouse over link */
-nav li a:hover {
-  color: lightcyan;
-  background-color: black;
-}
-/* click on selected link */
-nav li a:active {
-  color: darkblue;
-}
-/* tabbed to link */
-nav li a:focus {
-  color: darkblue;
-  background-color: lightblue;
-}
 
 .intro {
   padding: 0px 20px;
