@@ -17,9 +17,9 @@ newPrint.textContent = newText;
 // console.log(secondPic);
 // console.log(thirdPic);
 // create new consts to store new url to the img src
-const newFirstPic = document.getElementById("firstImage").src = "Images/codingSmall-500.jpg";
-const newSecondPic = document.getElementById("secondImage").src = "Images/cadDesignSmall-500.jpg";
-const newThirdPic = document.getElementById("thirdImage").src = "Images/roboticsSmall-500.jpg";
+const newFirstPic = document.getElementById("firstImage").src = "images/codingSmall-500.jpg";
+const newSecondPic = document.getElementById("secondImage").src = "images/cadDesignSmall-500.jpg";
+const newThirdPic = document.getElementById("thirdImage").src = "images/roboticsSmall-500.jpg";
 
 // setup array for image titles
 let titles = document.querySelectorAll(".content-title");
