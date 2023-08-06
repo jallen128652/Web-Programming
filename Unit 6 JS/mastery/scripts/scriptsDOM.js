@@ -29,7 +29,7 @@ titles[1].innerHTML = "Computer Aided Design";
 titles[2].innerHTML = "Robotics";
 // change the description paragraph for each image to fit the new images
 // write and store new descriptions
-let newDescription1 = "Software Engineering with be a leading field for many years. Artificial Intelligence will not be able to replace it due the human factor of determining needs. Engineers who learn to effectively code first and then implement Artificial Intelligence will be top candidates in the future.";
+let newDescription1 = "Software Engineering will be a leading field for many years. Artificial Intelligence will not be able to replace it due the human factor of determining needs. Engineers who learn to effectively code first and then implement Artificial Intelligence will be top candidates in the future.";
 let newDescription2 = "Computer Aided Design is one of the most critical skills for conducting mechanical design. Many if not all of the parts manufactured today are designed and stress analyzed using Computer Aided Design Software. This is a highly sought after skillset in all sectors of manufacturing.";
 let newDescription3 = "The field of Robotics is growing rapidly for uses in automated manufacturing. Once paired with Machine Learning and Artificial Intelligence, we can achieve full automation of manufacturing. Despite the benefits, there are major risks associated with combining the two disciplines, such as AGI takeovers.";
 // assign a const to the id
