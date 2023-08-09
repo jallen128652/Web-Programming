@@ -1,0 +1,92 @@
+You will be designing for a T-Shirt company that sells shirts as well as designs and prints their own products. Design a
+ product page so that a user can fill in an order and see the total cost for the request.
+  (This will be one page that a T-Shirt company can add to their existing website.)
+
+Using Adobe XD, mock-up the layout, color choices, and any designs you plan on using for your webpage.
+ (This will save you time when you start programming) Remember Adobe XD is just a mock-up, the real design will be when
+  you code your webpage.
+
+Make sure you add the basic design for a webpage that includes: Appropriate HTML semantic elementsLinks to an external site.,
+ logo(s), navigation, CSS styling (including the form, inputs, fonts, etc).  The navigation links don't need to link to
+  anything as they are just placeholders. Use your imagination, but make the site look professional.
+
+The webpage should include a minimum of 6 input typesLinks to an external site.. You can use more of the same type but
+ your site should contain a minimum of six different types not including the submit or reset inputs.
+Include:
+
+2 text inputs (One can be for a company name and something else; Or, first name and last name.)
+3 checkboxes (Each value attribute should be a price)
+2 radio buttons (Each value attribute should be a price)
+1 email
+2 additional and different input types of your choice
+
+The form should also contain a submit button. This should be used to place an order and the user should be presented with
+ the order information and total pricing.
+
+Add a reset button that resets the form.
+
+A minimum of 2 optimized images.  Make sure they are appropriate for the site and include width, height, and accessibility
+ attributes.
+
+**********JavaScript Requirements:***********************
+You must comment on your JavaScript code and label your requirements with comments to get full credit for each requirement
+ you choose.
+
+Your code should include any validation necessary, make sure your present helpful guidance to the user when they use
+ incorrect input or special requirements. (Option: alert method)
+
+A minimum of two functions.  One function must return a value, and the returned value must be captured and utilized in
+ some manner.  The other function must accept at least one argument.  The argument passed to the function must be utilized
+  within the function.
+
+You must use at least eight (8) of the items listed below in your code.  Make sure you label each item with a comment to
+ get full credit.  If you create your code with all 12 items but you don't label them, you will not get credit.
+   A simple comment will suffice for these items: //Loop or //Array, //Event Listener, etc.   Multiple uses of the same
+    item count as one.
+
+Variables
+Arithmetic Operators
+Loops
+If and Else
+Switch
+Arrays
+Try/Catch(Finally/Throw)
+Event listener
+Let
+Constant
+Boolean
+String Methods
+
+Make sure you debug your code and that it works as it should for the user. Utilize the browser developer tools and console
+ for bebugging/troubleshooting.
+
+Once again, don't forget to label your code with comments that highlight your 9 item choices. You can use more than 9 but
+ you will only get credit for 9 of them.
+
+This assignment must be your work and your work only.  If you are caught cheating, you will get a grade of zero.
+
+Make sure you allow yourself enough time to complete the final and submit it before the deadline. If you have any questions,
+ please reach out to your instructor as soon as possible.
+
+If I can make your code crash or if it doesn't work as intended, you will receive -30 points. Make sure you debug your code
+ and test, test, and test again before submitting it.
+
+*****************Video Requirement:*********************
+
+Create a brief (5 - 10 minute) video presentation that walks the viewer through the ordering webpage.  Review the code and
+ discuss/demonstrate the JavaScript functionality that has been implemented.
+
+You may use the video creation software of your choice, as long as the video is hosted and you can submit a link to the
+ shared video. Check with your instructor for free software provided by the school.
+
+What you will submit:
+Create a new folder inside of your “ITSE 2302 Intermediate Web Programming” Google Drive folder.  Name this new folder using
+ your firstInitial_lastName_Module7 Example: t_torres_Module7
+
+Copy the Mastery Assessment website folder into the Module 7 Google Drive folder.
+
+Get a link to the Module 7 Google Drive folder. Make sure you change the permissions to “Anyone with the link”. 
+
+Submit the Module 7 Google Drive link for this Mastery Assessment.
+
+Submit the link to your presentation video.
