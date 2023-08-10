@@ -21,24 +21,140 @@
       </div>
       <nav>
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="order.html">Order</a></li>
-        <li><a href="##">About</a></li>
-        <li><a href="mailto:jallen128652@mymail.tstc.edu">Email</a></li>
-      </ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="##">About</a></li>
+          <li><a href="mailto:jallen128652@mymail.tstc.edu">Email</a></li>
+        </ul>
       </nav>
     </header>
     <main>
       <h1>Order Page</h1>
       <h2></h2>
-      <div>
-        <p></p>
-      </div>
-      <div>
-        <p></p>
-      </div>
-      <div>
-        <p></p>
+      <div class="form">
+        <form method="get" id="order">
+          <div>
+            <h2>Order Form</h2>
+            <fieldset id="item" name="c_item">
+              <legend>What would you like to order?</legend>
+              <input id="hat" name="hat" type="checkbox" value="15" />
+              <label for="hat"
+                ><br />Dad Jokes Trucker Hat $15<br /><img
+                  src="images/shirt1.jpg"
+                  style="width: 250px; height: 250px" /></label
+              ><br />
+              <input id="mug" name="mug" type="checkbox" value="5" />
+              <label for="mug"
+                ><br />Dad Jokes Trucker Hat $15<br /><img
+                  src="images/shirt1.jpg"
+                  style="width: 250px; height: 250px" /></label
+              ><br />
+              <input id="koozie" name="koozie" type="checkbox" value="3" />
+              <label for="koozie"
+                ><br />Dad Jokes Trucker Hat $15<br /><img
+                  src="images/shirt1.jpg"
+                  style="width: 250px; height: 250px" /></label
+              ><br />
+              <input id="koozie" name="koozie" type="checkbox" value="3" />
+              <label for="koozie"
+                ><br />Dad Jokes Trucker Hat $15<br /><img
+                  src="images/shirt1.jpg"
+                  style="width: 250px; height: 250px" /></label
+              ><br />
+            </fieldset>
+            <ul class="contact">
+              <legend>Contact Information</legend>
+
+              <li>
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text" />
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="me@example.com"
+                />
+              </li>
+
+              <li>
+                <label for="address">Address:</label>
+                <input
+                  name="address"
+                  id="address"
+                  type="text"
+                  placeholder="ex: 6 Bushway dr. Dallas"
+                />
+              </li>
+              <li>
+                <label for="city">City:</label>
+                <input
+                  name="city"
+                  id="city"
+                  type="text"
+                  placeholder="ex: Dallas"
+                />
+              </li>
+
+              <legend></legend>
+              <li>
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                  <option value="CS">--Choose State--</option>
+                  <option value="TX">Texas (8.25% tax)</option>
+                  <option value="OR">Oregon (no sales tax)</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="zip">Zip Code:</label>
+                <input
+                  name="zip"
+                  id="zip"
+                  type="text"
+                  placeholder="ex: 77605"
+                />
+              </li>
+              <li>
+                <label for="phone">Phone:</label>
+                <input
+                  name="phone"
+                  id="phone"
+                  type="text"
+                  placeholder="ex: 8885551234"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <fieldset class="ship">
+            <legend>Shipping?</legend>
+            <input
+              id="s_pickup"
+              name="ship"
+              type="radio"
+              value="pickup"
+              checked
+            />
+            <label for="t_pickup">Pickup (no charge)</label><br />
+
+            <input id="s_usps" name="ship" type="radio" value="usps" />
+            <label for="t_usps">USPS ($10, takes ~1 week)</label><br />
+
+            <input id="s_fedex" name="ship" type="radio" value="fedex" />
+            <label for="t_fedex">Fedex ($7, takes ~3 days)</label><br />
+          </fieldset>
+
+          <label for="textarea">Comments:</label>
+          <textarea name="textarea" id="textarea" cols="35" rows="3"></textarea>
+          <br />
+
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+          <div id="results"></div>
+        </form>
       </div>
     </main>
     <footer>
