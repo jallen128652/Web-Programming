@@ -154,7 +154,7 @@ footer p {
   width: 300px;
   text-align: center;
   margin: auto;
-  background-color: #00f2f2;
+  background-color: #f4fcfb;
   padding: 20px;
   border-radius: 15px;
   border: 6px solid #5a4134;
@@ -175,8 +175,8 @@ footer p {
 .ship {
   display: flex;
   margin: auto;
-  max-width: 800px;
-  background-color: #00f2f2;
+  max-width: 1306px;
+  background-color: #f4fcfb;
   border-radius: 15px;
   border: 6px solid #5a4134;
 }
@@ -188,8 +188,15 @@ footer p {
 .ship input {
   margin-left: 60px;
 }
-form ul {
+form {
   background-color: #00f2f2;
+  border-radius: 15px;
+  border: 6px solid #5a4134;
+  margin: 50px;
+}
+
+form ul {
+  background-color: #f4fcfb;
   border-radius: 15px;
   border: 6px solid #5a4134;
   max-width: 1284px;
@@ -212,6 +219,40 @@ form ul legend {
 form .contact {
   margin-top: 15px;
   margin-bottom: 5px;
+}
+.comment {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1308px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4fcfb;
+  border: 6px solid #5a4134;
+  border-radius: 15px;
+}
+.upload {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1308px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4fcfb;
+  border: 6px solid #5a4134;
+  border-radius: 15px;
+}
+#results {
+  background-color: #f4fcfb;
+  border: 6px solid #5a4134;
+  border-radius: 15px;
+  max-width: 1326px;
+  min-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1530px) {
   .pictures img {
@@ -293,21 +334,24 @@ form .contact {
     max-width: 250px;
     max-height: 250px;
   }
+  header img {
+    margin: auto;
+    text-align: center;
+  }
   header {
     display: block;
+    align-items: center;
     margin: auto;
   }
   header nav li a {
     display: inline;
   }
-  header h1,
-  h2 {
+  .title {
+    display: inline;
     text-align: center;
-  }
-  header img {
     margin: auto;
-    align-self: center;
   }
+
   #item img {
     min-width: 400px;
     min-height: 400px;
