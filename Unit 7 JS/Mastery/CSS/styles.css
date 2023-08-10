@@ -1,0 +1,87 @@
+body {
+  background-color: #f4fcfb;
+  margin: 0;
+  font-family: "Miriam Libre", sans-serif;
+}
+header nav p {
+  font-family: "Miriam Libre", sans-serif;
+  font-size: 40px;
+  color: #5a4134;
+  background-color: #00f2f2;
+  border: 5px solid #096b72;
+  border-radius: 5px;
+  margin: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+header nav {
+  grid-column: 3;
+}
+.logo img {
+  width: 100%;
+  max-height: 250px;
+  max-width: 250px;
+}
+.title {
+  text-align: center;
+  color: #00f2f2;
+  max-width: 700px;
+}
+h1,
+h2 {
+  margin: 5px 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5a4134;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 6px solid #096b72;
+}
+header h1 {
+  grid-column: 2;
+  font-family: "magneto", sans-serif;
+  color: #00f2f2;
+  font-size: 105px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #096b72;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  max-height: 120px;
+}
+header h2 {
+  grid-column: 2;
+  font-family: "magneto", sans-serif;
+  color: #00f2f2;
+  font-size: 60px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #096b72;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+header img {
+  grid-column: 1;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  font-family: "Miriam Libre", sans-serif;
+}
+main h1 {
+  text-align: center;
+  font-size: 80px;
+  color: #5a4134;
+}
+footer {
+  background-color: #00f2f2;
+  border-radius: 8px;
+  border-color: #096b72;
+  border-style: solid;
+  border-width: 6px;
+}
