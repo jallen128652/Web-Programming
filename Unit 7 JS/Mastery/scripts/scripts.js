@@ -12,11 +12,14 @@ function outerMain(event) {
         var total = calculateTotal();
         //  declare vars for the order   
         // print contact details for the customer    
-        document.getElementById("results").innerHTML = ("Customer name is: " + document.getElementById('name').value +
-            "\nEmail: " + document.getElementById('email').value + "\nAddress: \n" + document.getElementById('address').value + "\n" +
-            document.getElementById('city').value + ", " + document.getElementById('state').value + ". " +
-            document.getElementById('zip').value + "\nPhone number: " + document.getElementById('phone').value +
-            "\nYour total is: $" + total.toFixed(2));
+        document.getElementById("oname").innerHTML = ("Customer name is: " + document.getElementById('name').value);
+        document.getElementById("oemail").innerHTML = ("Email: " + document.getElementById('email').value);
+        document.getElementById("oaddy").innerHTML = ("Address: \n" + document.getElementById('address').value);
+        document.getElementById("ocity").innerHTML = (document.getElementById('city').value + ", " +
+            document.getElementById('state').value + ". " + document.getElementById('zip').value);
+        document.getElementById("ophone").innerHTML = ("Phone number: " + document.getElementById('phone').value);
+        document.getElementById("ototal").innerHTML = ("Your total is: $" + total.toFixed(2));
+
     }
 }
 // fx 2 called from fx1
