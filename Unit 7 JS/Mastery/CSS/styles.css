@@ -148,6 +148,9 @@ footer p {
   font-size: 30px;
   font-weight: 600;
 }
+footer a {
+  color: #5a4134;
+}
 
 #item {
   display: flex;
