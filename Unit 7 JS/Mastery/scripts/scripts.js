@@ -104,3 +104,6 @@ function calculateTotal() {
 // loop
 // Try/Catch(Finally/Throw)
 // Constant
+// want:
+// incorporate color drop down to change image 
+// store order values in array and loop through the array to display order details for qty/type/color
