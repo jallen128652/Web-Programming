@@ -99,3 +99,8 @@ function calculateTotal() {
     total = subTotal + tax + shipping;
     return total;
 }
+// still need:
+// array
+// loop
+// Try/Catch(Finally/Throw)
+// Constant
