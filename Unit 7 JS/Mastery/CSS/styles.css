@@ -327,20 +327,14 @@ form .contact {
     max-width: 250px;
     max-height: 250px;
   }
-  header img {
-    margin: auto;
-    text-align: center;
-  }
   header {
     display: block;
-    align-items: center;
-    margin: auto;
+    text-align: center;
   }
   header nav li a {
     display: inline;
   }
   .title {
-    display: inline;
     text-align: center;
     margin: auto;
   }
