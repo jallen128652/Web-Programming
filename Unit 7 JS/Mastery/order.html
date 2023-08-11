@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- character encoding -->
     <meta charset="UTF-8" />
+    <!-- Page description -->
+    <meta name="description" contents="MacN'Tees Order Page" />
+    <!-- Viewport settings to scale for device sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- title -->
     <title>MacN'Tees Order Page</title>
+    <!-- styles -->
     <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- scripts -->
     <script src="scripts/scripts.js" async></script>
   </head>
+  <!-- body -->
   <body>
+    <!-- header -->
     <header>
       <div class="logo">
         <img
@@ -29,6 +38,7 @@
         </ul>
       </nav>
     </header>
+    <!-- main -->
     <main>
       <div class="form">
         <form method="get" id="order">
@@ -63,9 +73,9 @@
                 </select>
                 <select name="color" id="color1">
                   <option value="CC">--Choose Color--</option>
-                  <option value="gry">gray</option>
-                  <option value="wht">white</option>
-                  <option value="blk">black</option>
+                  <option value="gray">gray</option>
+                  <option value="white">white</option>
+                  <option value="black">black</option>
                   <option value="red">red</option>
                 </select>
                 <select name="qty" id="qty1">
@@ -92,9 +102,9 @@
                 </select>
                 <select name="color" id="color2">
                   <option value="CC">--Choose Color--</option>
-                  <option value="gry">gray</option>
-                  <option value="wht">white</option>
-                  <option value="blk">black</option>
+                  <option value="gray">gray</option>
+                  <option value="white">white</option>
+                  <option value="black">black</option>
                   <option value="red">red</option>
                 </select>
                 <select name="qty" id="qty2">
@@ -122,9 +132,9 @@
                 </select>
                 <select name="color" id="color3">
                   <option value="CC">--Choose Color--</option>
-                  <option value="gry">gray</option>
-                  <option value="wht">white</option>
-                  <option value="blk">black</option>
+                  <option value="gray">gray</option>
+                  <option value="white">white</option>
+                  <option value="black">black</option>
                   <option value="red">red</option>
                 </select>
                 <select name="qty" id="qty3">
@@ -152,9 +162,9 @@
                 </select>
                 <select name="color" id="color4">
                   <option value="CC">--Choose Color--</option>
-                  <option value="gry">gray</option>
-                  <option value="wht">white</option>
-                  <option value="blk">black</option>
+                  <option value="gray">gray</option>
+                  <option value="white">white</option>
+                  <option value="black">black</option>
                   <option value="red">red</option>
                 </select>
                 <select name="qty" id="qty4">
@@ -264,18 +274,25 @@
             <button type="reset">RESET</button>
           </div>
           <div id="results">
-            <h3>Order Receipt:</h3>
-            <p id="oname"></p>
-            <p id="oemail"></p>
-            <p id="oaddy"></p>
-            <p id="ocity"></p>
-            <p id="ophone"></p>
-            <p id="otype"></p>
-            <p id="ototal"></p>
+            <div class="receipt">
+              <h3>Order Receipt:</h3>
+              <p id="oname"></p>
+              <p id="oemail"></p>
+              <p id="oaddy"></p>
+              <p id="ocity"></p>
+              <p id="ophone"></p>
+              <p>Your ordered:</p>
+              <p id="oColorQtyType"></p>
+              <p id="sub"></p>
+              <p id="tax"></p>
+              <p id="ship"></p>
+              <p id="ototal"></p>
+            </div>
           </div>
         </form>
       </div>
     </main>
+    <!-- footer -->
     <footer>
       <!-- Copyright info -->
       <p>

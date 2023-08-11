@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: "Miriam Libre", sans-serif;
 }
+/* -------------------------header section----------------------------- */
 header nav ul {
   list-style: none;
   padding: 0;
@@ -88,7 +89,7 @@ header img {
   padding: 0;
   margin: 0;
 }
-
+/* ------------------------------------------main section---------------------------------- */
 main {
   font-family: "Miriam Libre", sans-serif;
 }
@@ -135,23 +136,6 @@ main h2 a {
 main img {
   border-radius: 9px;
 }
-footer {
-  background-color: #00f2f2;
-  border-radius: 8px;
-  border-color: #096b72;
-  border-style: solid;
-  border-width: 6px;
-}
-footer p {
-  color: #5a4134;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-}
-footer a {
-  color: #5a4134;
-}
-
 #item {
   display: flex;
   width: 300px;
@@ -240,6 +224,7 @@ form .contact {
   border: 6px solid #5a4134;
   border-radius: 15px;
 }
+/* print results section */
 #results {
   background-color: #f4fcfb;
   border: 6px solid #5a4134;
@@ -250,6 +235,30 @@ form .contact {
   margin-right: auto;
   margin-bottom: 10px;
 }
+.receipt {
+  color: #5a4134;
+  margin-left: 10px;
+}
+/* ------------------------------------footer section----------------------------------------- */
+footer {
+  background-color: #00f2f2;
+  border-radius: 8px;
+  border-color: #096b72;
+  border-style: solid;
+  border-width: 6px;
+}
+footer p {
+  color: #5a4134;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+footer a {
+  color: #5a4134;
+}
+
+/* ------------------------------media queries for different breakpoints------------------------- */
+/* fullscreen */
 @media screen and (max-width: 1530px) {
   .pictures img {
     max-width: 250px;
@@ -260,6 +269,7 @@ form .contact {
     max-height: 250px;
   }
 }
+/* tablet rotated */
 @media screen and (max-width: 1360px) {
   #item {
     display: block;
@@ -276,6 +286,7 @@ form .contact {
     font-size: 50px;
   }
 }
+/* tablet */
 @media screen and (max-width: 1130px) {
   .pictures img {
     max-width: 200px;
@@ -317,6 +328,7 @@ form .contact {
     -webkit-text-stroke-color: #096b72;
   }
 }
+/* below this point mobile style */
 @media screen and (max-width: 930px) {
   .pictures {
     display: grid;
