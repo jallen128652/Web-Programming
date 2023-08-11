@@ -58,6 +58,7 @@ function calculateTotal() {
     var qty3 = 0;
     var qty4 = 0;
     var tax, shipping, total, subTotal;
+    const RATE = 0.0825;
 
     if (crew === true) {
         var item1 = parseInt(document.getElementById('crew').value, 10) || 0;
@@ -87,7 +88,7 @@ function calculateTotal() {
     subTotal = ((item1 * qty1) + (item2 * qty2) + (item3 * qty3) + (item4 * qty4));
     // calcs tax
     if (state.value === 'TX') {
-        tax = parseInt(subTotal) * 0.0825
+        tax = parseInt(subTotal) * RATE;
     } else {
         tax = 0;
     }
@@ -104,14 +105,29 @@ function calculateTotal() {
             shipping = 0;
             break;
     }
+    // testing
+    console.log(item1);
+    console.log(item2);
+    console.log(item3);
+    console.log(item4);
+    console.log(qty1);
+    console.log(qty2);
+    console.log(qty3);
+    console.log(qty4);
+    console.log(subTotal);
+    console.log(tax);
+    console.log(shipping);
+
+
     total = subTotal + tax + shipping;
+    // testing
+    console.log(total);
     return total;
 }
 // still need:
 // array
 // loop
-// Try/Catch(Finally/Throw)
-// Constant
+
 // want:
 // incorporate color drop down to change image
 // store order values in array and loop through the array to display order details for qty/type/color
