@@ -53,30 +53,38 @@ function calculateTotal() {
     var vneck = document.getElementById('vee').checked;
     var sweater = document.getElementById('swtr').checked;
     var hoodie = document.getElementById('hoodie').checked;
+    var qty1 = 0;
+    var qty2 = 0;
+    var qty3 = 0;
+    var qty4 = 0;
     var tax, shipping, total, subTotal;
 
     if (crew === true) {
         var item1 = parseInt(document.getElementById('crew').value, 10) || 0;
+        qty1 = parseInt(document.getElementById("qty1").value, 10) || 0;
     } else {
         item1 = 0;
     }
     if (vneck === true) {
         var item2 = parseInt(document.getElementById('vee').value, 10) || 0;
+        qty2 = parseInt(document.getElementById("qty2").value, 10) || 0;
     } else {
         item2 = 0;
     }
     if (sweater === true) {
         var item3 = parseInt(document.getElementById('swtr').value, 10) || 0;
+        qty3 = parseInt(document.getElementById("qty3").value, 10) || 0;
     } else {
         item3 = 0;
     }
     if (hoodie === true) {
         var item4 = parseInt(document.getElementById('hoodie').value, 10) || 0;
+        qty4 = parseInt(document.getElementById("qty4").value, 10) || 0;
     } else {
         item4 = 0;
     }
     // adds up the subtotal 
-    subTotal = item1 + item2 + item3 + item4;
+    subTotal = ((item1 * qty1) + (item2 * qty2) + (item3 * qty3) + (item4 * qty4));
     // calcs tax
     if (state.value === 'TX') {
         tax = parseInt(subTotal) * 0.0825
@@ -105,5 +113,5 @@ function calculateTotal() {
 // Try/Catch(Finally/Throw)
 // Constant
 // want:
-// incorporate color drop down to change image 
+// incorporate color drop down to change image
 // store order values in array and loop through the array to display order details for qty/type/color
