@@ -1,5 +1,69 @@
 // event listener calls fx 1 when the submit button is pressed
 document.getElementById('order').addEventListener('submit', outerMain);
+// event listeners 
+document.getElementById("color1").addEventListener("change", updateImage);
+document.getElementById("color2").addEventListener("change", updateImage);
+document.getElementById("color3").addEventListener("change", updateImage);
+document.getElementById("color4").addEventListener("change", updateImage);
+// function for img src change
+function updateImage(event) {
+    // stores which item type dropdown
+    const colorDropdownId = event.target.id;
+    // stores the dropdown value
+    const selectedColor = event.target.value;
+    // selects dropdown by item type
+    if (colorDropdownId === "color1") {
+        let newImageSrc1;
+        // stores new src based on dropdown selection
+        if (selectedColor === "gray") {
+            newImageSrc1 = "images/crewgray.jpg";
+        } else if (selectedColor === "black") {
+            newImageSrc1 = "images/crewblack.jpg";
+        } else if (selectedColor === "red") {
+            newImageSrc1 = "images/crewred.jpg";
+        } else {
+            newImageSrc1 = "images/crew.jpg";
+        }
+        // updates the src
+        document.getElementById("crewImage").src = newImageSrc1;
+    } else if (colorDropdownId === "color2") {
+        let newImageSrc2;
+        if (selectedColor === "gray") {
+            newImageSrc2 = "images/vneckgray.jpg";
+        } else if (selectedColor === "black") {
+            newImageSrc2 = "images/vneckblack.jpg";
+        } else if (selectedColor === "red") {
+            newImageSrc2 = "images/vneckred.jpg";
+        } else {
+            newImageSrc2 = "images/vneck.jpg";
+        }
+        document.getElementById("veeImage").src = newImageSrc2;
+    } else if (colorDropdownId === "color3") {
+        let newImageSrc3;
+        if (selectedColor === "gray") {
+            newImageSrc3 = "images/sweatergray.jpg";
+        } else if (selectedColor === "black") {
+            newImageSrc3 = "images/sweaterblack.jpg";
+        } else if (selectedColor === "red") {
+            newImageSrc3 = "images/sweaterred.jpg";
+        } else {
+            newImageSrc3 = "images/sweater.jpg";
+        }
+        document.getElementById("swtrImage").src = newImageSrc3;
+    } else if (colorDropdownId === "color4") {
+        let newImageSrc4;
+        if (selectedColor === "gray") {
+            newImageSrc4 = "images/hoodiegray.jpg";
+        } else if (selectedColor === "black") {
+            newImageSrc4 = "images/hoodieblack.jpg";
+        } else if (selectedColor === "red") {
+            newImageSrc4 = "images/hoodiered.jpg";
+        } else {
+            newImageSrc4 = "images/hoodie.jpg";
+        }
+        document.getElementById("hoodieImage").src = newImageSrc4;
+    }
+}
 // function 1 pass arg for submit button press
 function outerMain(event) {
     // prevent default behavior on load
