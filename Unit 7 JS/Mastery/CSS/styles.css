@@ -110,6 +110,11 @@ main h2 a {
   text-decoration-line: none;
   color: #5a4134;
 }
+main button {
+  color: #5a4134;
+  border: 2px solid #5a4134;
+  border-radius: 5px;
+}
 .pictures {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -223,6 +228,7 @@ form .contact {
   background-color: #f4fcfb;
   border: 6px solid #5a4134;
   border-radius: 15px;
+  color: #5a4134;
 }
 /* print results section */
 #results {
@@ -330,9 +336,71 @@ footer a {
 }
 /* below this point mobile style */
 @media screen and (max-width: 930px) {
+  header nav ul {
+    display: flex;
+  }
+  .logo img {
+    width: 100%;
+    max-height: 180px;
+    max-width: 180px;
+  }
+  main {
+    font-size: 12px;
+  }
+  main h1 {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  main h2 {
+    font-size: 25px;
+  }
+  .upload {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1308px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4fcfb;
+    border: 6px solid #5a4134;
+    border-radius: 15px;
+    font-size: 11px;
+    color: #5a4134;
+  }
+  main button {
+    font-size: 10px;
+  }
+  main textarea {
+    width: 150px;
+    height: 30px;
+  }
+  #item {
+    font-size: 15px;
+  }
+  #item legend {
+    font-size: 15px;
+  }
+  #item label {
+    font-size: 15px;
+  }
+  .ship legend {
+    font-size: 15px;
+  }
+  form ul legend {
+    font-size: 15px;
+  }
+  form ul li {
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+  }
   .pictures {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .pictures img {
     max-width: 250px;
@@ -358,8 +426,33 @@ footer a {
     min-width: 400px;
     min-height: 400px;
   }
+  footer p {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 580px) {
+  .logo img {
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
+  }
+  header nav ul li a {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .upload {
+    font-size: 10px;
+  }
+  main button {
+    font-size: 9px;
+  }
+  main textarea {
+    width: 100px;
+    height: 15px;
+  }
   .pictures img {
     max-width: 200px;
     max-height: 200px;
@@ -378,15 +471,45 @@ footer a {
     min-width: 300px;
     min-height: 300px;
   }
+  .ship {
+    display: block;
+  }
+  footer p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 467px) {
+  .logo img {
+    width: 100%;
+    max-height: 120px;
+    max-width: 120px;
+  }
+  header nav ul li a {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 50px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  main h1 {
+    font-size: 25px;
+  }
+  main h2 {
+    font-size: 20px;
+  }
+  .pictures {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   .pictures img {
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 140px;
+    max-height: 140px;
   }
   .col {
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 140px;
+    max-height: 140px;
   }
   header h1 {
     font-size: 38px;
