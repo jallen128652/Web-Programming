@@ -1,0 +1,74 @@
+h1 {
+  text-align: center;
+}
+.marker {
+  height: 25px;
+  width: 200px;
+  margin: 10px auto;
+}
+.red {
+  background: linear-gradient(
+    180deg,
+    rgb(122, 74, 14),
+    rgb(245, 62, 113),
+    rgb(162, 27, 27)
+  );
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+  background: linear-gradient(180deg, #55680d, #71f53e, #116c31);
+  box-shadow: 0 0 20px 0 #3b7e20cc;
+}
+
+.blue {
+  background: linear-gradient(
+    hsl(186, 76%, 16%),
+    hsl(223, 90%, 60%),
+    hsl(240, 56%, 42%)
+  );
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 75%);
+}
+.cap {
+  width: 60px;
+  height: 25px;
+}
+.cap,
+.sleeve {
+  display: inline-block;
+}
+/*
+Linear gradient has a degree(if nothing stated vertical is normal), and multi color(2 min) args. Can use color stops in % or px 
+Note the color steps are normally 0%, 50%, 100% for even stops
+background: linear-gradient(180deg, rgb(255, 0, 0) 0%, rgb(0, 255, 0) 50%, rgb(0, 0, 255) 100%);
+Example of gradient within same colore spectrum
+background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%);
+Example of gradient useing hex colors
+background: linear-gradient(180deg, #55680D, #71F53E, #116C31);
+Example of gradient using hsl
+background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+Hue light and saturation
+background-color: hsl(240, 100%, 50%);
+Hex colors: Each pair is RGB with the values 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+background-color: #007F00;
+RGBA colors are the same as RGB but with an alpha channel
+rgba(redValue, greenValue, blueValue, alphaValue); Alpha channel can be used for opacity
+background-color: rgba(255, 255, 255, 50%); == white with 50% opacity
+Box shadows: box-shadow: offsetX offsetY blurRadius spreadRadius color; Blur radius and sperad radius defaults to 0 if no arg
+example box shadow: box-shadow: 5px 5px red; can be used to create a 5px shadow in the x and y direction - values up and left
+Third arg is blur radius
+box-shadow: 5px 5px 10px red;
+Hex with alpha channel: #3B7E20CC
+HSL with alpha channel: hsla(223, 59%, 31%, 0.8)
+*/
