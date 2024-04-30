@@ -11,11 +11,270 @@
       <header>
         <h1 id="title">Fixit Felix Work Request Form</h1>
         <p id="description">
-          Please fill out this form as completely and accurately as possible so
-          we can send you the most accurate estimate.
+          Please fill out this form so we can send you the most accurate
+          estimate.
         </p>
       </header>
-      <form id="survey-form"></form>
+      <form id="survey-form" action="##" method="POST">
+        <!-- Name, address, phone, email -->
+        <fieldset class="details">
+          <label id="name-label"
+            >Name
+            <input
+              id="name"
+              type="text"
+              required
+              placeholder="First name and Last name"
+          /></label>
+          <label>Address(optional) <input /></label>
+          <label id="number-label"
+            >Phone
+            <input
+              id="number"
+              type="number"
+              pattern="[0-9]{10}"
+              required
+              placeholder="ex: 5555555555"
+              min="0"
+              max="9999999999"
+          /></label>
+          <label id="email-label"
+            >Email
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="ex: you@youremail.com"
+          /></label>
+          <hr />
+          <!-- dropdown: choose one, interior project, exterior project, full interior rennovation, full exterior rennovation, whole house rennovation -->
+          <label for="dropdown" class="drop"
+            >Which selection best describes your project?
+            <select id="dropdown" name="project-type">
+              <option value="">(choose one)</option>
+              <option value="1">interior project</option>
+              <option value="2">exterior project</option>
+              <option value="3">full interior rennovation</option>
+              <option value="4">full exterior rennovation</option>
+              <option value="5">whole house rennovation</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <!-- Radio: ready to work, 1-3 months, greater than 3 months -->
+          <legend>When will you be ready to start work?</legend>
+          <label for="ready"
+            ><input
+              type="radio"
+              name="timeline"
+              value="1"
+              id="ready"
+              class="inline"
+            />
+            ready to work</label
+          >
+          <label for="soon"
+            ><input
+              type="radio"
+              name="timeline"
+              value="2"
+              id="soon"
+              class="inline"
+            />
+            1-3 months</label
+          >
+          <label for="later"
+            ><input
+              type="radio"
+              name="timeline"
+              value="3"
+              id="later"
+              class="inline"
+            />
+            greater than 3 months</label
+          >
+          <hr />
+          <!-- dropdown: choose one, Homeowners Insurance, Financing, Cash or Chargecard -->
+          <label for="funding-type" class="drop"
+            >How will you pay for the work?
+            <select id="funding-type" name="funding-type">
+              <option value="">(choose one)</option>
+              <option value="1">Homeowners Insurance</option>
+              <option value="2">Financing</option>
+              <option value="3">Cash or Chargecard</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <!-- Checkbox: Flooring, Tile, Drywall, Interior Paint, Exterior Paint, Cabinets, Shower, Sinks, Tubs, Roofing, Siding, Windows, Doors, Insulation,  -->
+          <legend>Check all that apply</legend>
+          <label for="Flooring"
+            ><input
+              id="Flooring"
+              name="Flooring"
+              type="checkbox"
+              value="a"
+              class="inline"
+            />
+            Flooring</label
+          >
+          <label for="Tile"
+            ><input
+              id="Tile"
+              name="Tile"
+              type="checkbox"
+              value="b"
+              class="inline"
+            />
+            Tile</label
+          >
+          <label for="Drywall"
+            ><input
+              id="Drywall"
+              name="Drywall"
+              type="checkbox"
+              value="c"
+              class="inline"
+            />
+            Drywall</label
+          >
+          <label for="Interior"
+            ><input
+              id="Interior"
+              name="Interior Paint"
+              type="checkbox"
+              value="d"
+              class="inline"
+            />
+            Interior Paint</label
+          >
+          <label for="Exterior"
+            ><input
+              id="Exterior"
+              name="Exterior Paint"
+              type="checkbox"
+              value="e"
+              class="inline"
+            />
+            Exterior Paint</label
+          >
+          <label for="Cabinets"
+            ><input
+              id="Cabinets"
+              name="Cabinets"
+              type="checkbox"
+              value="f"
+              class="inline"
+            />
+            Cabinets</label
+          >
+          <label for="Shower"
+            ><input
+              id="Shower"
+              name="Shower"
+              type="checkbox"
+              value="g"
+              class="inline"
+            />
+            Shower</label
+          >
+          <label for="Sinks"
+            ><input
+              id="Sinks"
+              name="Sinks"
+              type="checkbox"
+              value="h"
+              class="inline"
+            />
+            Sinks</label
+          >
+          <label for="Tubs"
+            ><input
+              id="Tubs"
+              name="Tubs"
+              type="checkbox"
+              value="i"
+              class="inline"
+            />
+            Tubs</label
+          >
+          <label for="Roofing"
+            ><input
+              id="Roofing"
+              name="Roofing"
+              type="checkbox"
+              value="j"
+              class="inline"
+            />
+            Roofing</label
+          >
+          <label for="Siding"
+            ><input
+              id="Siding"
+              name="Siding"
+              type="checkbox"
+              value="k"
+              class="inline"
+            />
+            Siding</label
+          >
+          <label for="Windows"
+            ><input
+              id="Windows"
+              name="Windows"
+              type="checkbox"
+              value="l"
+              class="inline"
+            />
+            Windows</label
+          >
+          <label for="Doors"
+            ><input
+              id="Doors"
+              name="Doors"
+              type="checkbox"
+              value="m"
+              class="inline"
+            />
+            Doors</label
+          >
+          <label for="Insulation"
+            ><input
+              id="Insulation"
+              name="Insulation"
+              type="checkbox"
+              value="n"
+              class="inline"
+            />
+            Insulation</label
+          >
+          <label for="Context" class="text"
+            >Provide a detailed overview:
+            <textarea
+              id="Context"
+              rows="3"
+              cols="30"
+              placeholder="I want my bathroom remodeled..."
+              name="bio"
+            ></textarea>
+          </label>
+        </fieldset>
+        <div>
+          <label for="terms-and-conditions" id="check"
+            ><input
+              class="inline"
+              id="terms-and-conditions"
+              type="checkbox"
+              required
+              name="terms-and-conditions"
+              value="yes"
+            />
+            I accept the
+            <a href="##">terms and conditions</a></label
+          >
+          <input id="submit" type="submit" value="Submit" />
+        </div>
+      </form>
     </div>
   </body>
 </html>
