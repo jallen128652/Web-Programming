@@ -1,0 +1,96 @@
+/* If you inspect your .label element with your browser's developer tools, you may notice that
+ it's actually 288 pixels wide instead of 270. This is because, by default, the browser includes 
+ the border and padding when determining an element's size.
+To solve this, reset the box model by creating a * selector and giving it a box-sizing property
+ of border-box. */
+* {
+  box-sizing: border-box;
+}
+body {
+  /* fonts with spaces must be wrapped in quotes */
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  font-size: 16px;
+}
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+/* Remember that the use of h1, h2, and similar tags determine the semantic structure of your HTML.
+ However, you can adjust the CSS of these elements to control the visual flow and hierarchy.
+Create an h1 rule and set the font-weight property to 800. This will make your h1 text bolder. */
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px;
+}
+p {
+  margin: 0;
+  /* spaces the span element to the other margin */
+  display: flex;
+  justify-content: space-between;
+}
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+.bold {
+  font-weight: 800;
+}
+.large {
+  height: 10px;
+}
+.large,
+.medium {
+  background-color: black;
+  border: 0;
+}
+/* The rem unit stands for root em, and is relative to the font size of the html element. */
+.small-text {
+  /* 0.85 x 16px(html font size) = 13.6px */
+  font-size: 0.85rem;
+}
+.calories-info h2 {
+  margin: 0;
+}
+/* moves the span element in the div to the right margin */
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.calories-info span {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin: -7px -2px;
+}
+.medium {
+  height: 5px;
+}
+.right {
+  justify-content: flex-end;
+}
+.indent {
+  margin-left: 1em;
+}
+/* The :not pseudo-selector can be used to select all elements that do not match the given CSS rule. */
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+.double-indent {
+  margin-left: 2em;
+}
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
